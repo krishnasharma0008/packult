@@ -1,0 +1,254 @@
+@import "./theme.scss";
+
+// WEBSITE PAGE PADDING
+
+@mixin pagePadding() {
+    padding: 0 10vw;
+}
+
+// DISPLAY ALIGNMENTS UTILITIES
+// set display to flex and align items cennter
+@mixin flexItemsCenter {
+    display: flex;
+    align-items: center;
+}
+
+// set display to flex and justify content center
+@mixin flexContentCenter {
+    display: flex;
+    justify-content: center;
+}
+
+// set display to flex and justify content space-between
+@mixin flexContentSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+// set display to flex and justify content space-around
+@mixin flexContentSpaceAround {
+    display: flex;
+    justify-content: space-around;
+}
+
+// set display to flex and justify content space-evenly
+@mixin flexContentSpaceEvenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+// set display to flex and justify content flex-end
+@mixin flexContentEnd {
+    display: flex;
+    justify-content: flex-end;
+}
+
+// align items center
+@mixin alignItemsCenter {
+    align-items: center;
+}
+
+// space between
+@mixin spaceBetween {
+    justify-content: space-between;
+}
+
+// space around
+@mixin spaceAround {
+    justify-content: space-around;
+}
+
+// space evenly
+@mixin spaceEvenly {
+    justify-content: space-evenly;
+}
+
+
+// PADDING UTILITIES
+
+// padding top
+@mixin paddingTop($padding) {
+    padding-top: $padding;
+}
+
+// padding bottom
+@mixin paddingBottom($padding) {
+    padding-bottom: $padding;
+}
+
+// padding left
+@mixin paddingLeft($padding) {
+    padding-left: $padding;
+}
+
+// padding right
+@mixin paddingRight($padding) {
+    padding-right: $padding;
+}
+
+// padding top and bottom
+@mixin paddingTB($padding) {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+// padding top and bottom custom
+@mixin paddingTopBottom($paddingTop, $paddingBottom) {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBottom;
+}
+
+// padding left and right
+@mixin paddingLR($padding) {
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+// padding left and right custom
+@mixin paddingLeftRight($paddingLeft, $paddingRight) {
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+}
+
+// padding all sides
+@mixin paddingAll($padding) {
+    padding: $padding;
+}
+
+// padding top and bottom and left and right
+@mixin paddingTBRL($T, $B, $L, $R) {
+    padding-top: $T;
+    padding-bottom: $B;
+    padding-left: $L;
+    padding-right: $R;
+}
+
+// MARGIN UTILITIES
+
+// margin top
+@mixin marginTop($margin) {
+    margin-top: $margin;
+}
+
+// margin bottom
+@mixin marginBottom($margin) {
+    margin-bottom: $margin;
+}
+
+// margin left
+@mixin marginLeft($margin) {
+    margin-left: $margin;
+}
+
+// margin right
+@mixin marginRight($margin) {
+    margin-right: $margin;
+}
+
+// margin top and bottom
+@mixin marginTB($margin) {
+    margin-top: $margin;
+    margin-bottom: $margin;
+}
+
+// margin top and bottom custom
+@mixin marginTopBottom($marginTop, $marginBottom) {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+}
+
+// margin left and right
+@mixin marginLR($margin) {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+// margin left and right custom
+@mixin marginLeftRight($marginLeft, $marginRight) {
+    margin-left: $marginLeft;
+    margin-right: $marginRight;
+}
+
+// margin all sides
+@mixin marginAll($margin) {
+    margin: $margin;
+}
+
+// margin top and bottom and left and right
+@mixin marginTBRL($T, $B, $L, $R) {
+    margin-top: $T;
+    margin-bottom: $B;
+    margin-left: $L;
+    margin-right: $R;
+}
+
+// BUTTON UTILITIES
+
+// button properties
+
+@mixin button {
+    border: solid 1px $light;
+    border-radius: 5px;
+    padding: 0.5vw 1vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+// button custom properties
+
+@mixin buttonCustom($border, $borderRadius, $background: $light, $color: $dark) {
+    border: $border;
+    border-radius: $borderRadius;
+    background-color: $background;
+    color: $color;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+// button hover properties
+
+@mixin buttonHover($color, $backgroundColor) {
+    &:hover {
+        color: $color;
+        background-color: $backgroundColor;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+// button hover custom properties
+
+@mixin buttonHoverCustom($border, $borderRadius, $background: $light, $color: $dark) {
+    &:hover {
+        border: $border;
+        border-radius: $borderRadius;
+        background-color: $background;
+        color: $color;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+// button with transition on hover
+
+@mixin buttonTransition($color, $backgroundColor, $borderColor, $transition) {
+    &:hover {
+        color: $color;
+        background-color: $backgroundColor;
+        border-color: $borderColor;
+        transition: $transition;
+    }
+}
+
+// button with transition on hover custom
+
+@mixin buttonTransitionCustom($color, $backgroundColor, $borderColor, $transition, $transitionProperty) {
+    &:hover {
+        color: $color;
+        background-color: $backgroundColor;
+        border-color: $borderColor;
+        transition: $transition;
+        transition-property: $transitionProperty;
+    }
+}

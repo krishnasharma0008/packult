@@ -1,0 +1,362 @@
+@import "../theme.scss";
+@import "../utils.scss";
+
+.nav {
+    @include flexItemsCenter;
+    @include spaceBetween;
+    @include paddingLR(5vw);
+    background-color: $dark;
+    height: 5vw;
+    color: $light;
+    position: fixed;
+    font-family: "Visby semibold";
+    letter-spacing: .1vw;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+    //height: 1px; /* Thickness of the top border */
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(270deg, #000000 20%, #E66FF1 42.25%, #73A3F4 70.25%, #000000 95.81%);
+    border-image-slice: 1;
+
+    // border-bottom: 2px solid transparent;
+    // background: linear-gradient(270deg, #000000 0%, #E66FF1 42.25%, #73A3F4 70.25%, #000000 101.81%);
+    // background-clip: padding-box;
+
+    .mlogo {
+        display: none;
+    }
+
+    .mlinks {
+        display: none;
+    }
+
+    img {
+        width: 8vw;
+        height: max-content;
+    }
+
+    ul {
+        width: 60vw;
+        @include flexContentSpaceEvenly;
+
+        padding: 5vw;
+
+
+        li {
+            // background-color: aqua;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            font-size: 1vw;
+            text-decoration: none;
+            color: $light;
+            width: max-content;
+            height: max-content;
+
+
+            &:hover {
+                color: $primary;
+                transition: all 0.3s ease-in-out;
+
+            }
+
+
+            transition: all 0.3s ease-in-out;
+
+
+            &:nth-child(1) {
+                transition: all 0.2s ease-in-out;
+                position: relative;
+
+
+
+                &:hover {
+                    .dropdown {
+                        height: 5vw;
+                        padding: 1vw;
+                        padding-top: 2vw;
+                        font-size: 1vw;
+                        transition: font-size 0.1s .05s ease;
+                    }
+                }
+
+                .dropdown {
+                    position: absolute;
+                    height: 0;
+                    font-size: 0;
+                    width: 15vw;
+                    left: -1vw;
+                    border-radius: 0 0 .5vw .5vw;
+                    flex-direction: column;
+                    gap: 1vw;
+                    // font-size: 1vw;
+                    color: $light;
+                    padding: 0vw;
+                    display: flex;
+                    padding-top: 0vw;
+                    background-color: $dark;
+                    transition: all 0.3s .1s ease-in-out, font-size 0.1s ease;
+
+                    span {
+                        color: $light;
+                        transition: all 0.1s ease-in-out;
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            &:nth-child(4) {
+                // transition: all 0.5s;
+                position: relative;
+
+
+
+                &:hover {
+                    .dropdown {
+                        height: max-content;
+                        padding: 1vw;
+                        padding-top: 2vw;
+                        opacity: 1;
+                        font-size: 1vw;
+                        transition: all 0.2s 0.2s ease-in-out, font-size 0.2s 0.2s ease-in-out, opacity 0.5s 0.5s ease-in-out;
+                    }
+                }
+
+                .dropdown {
+                    position: absolute;
+                    font-size: 0vw;
+                    width: 20vw;
+                    left: -1vw;
+                    border-radius: 0 0 .5vw .5vw;
+                    flex-direction: column;
+                    gap: 1vw;
+                    // font-size: 1vw;
+                    color: $light;
+                    padding: 0vw;
+                    display: flex;
+                    padding-top: 0vw;
+                    opacity: 0;
+                    background-color: $dark;
+                    // transition: all 0.5s .5s ease-in-out, opacity 0.3s ease;
+                    height: 0vw;
+
+                    span {
+                        color: $light;
+                        transition: all 0.4s ease-in-out;
+
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+            .selected {
+                color: $primary;
+                transition: all 0.3s ease-in-out;
+
+            }
+
+            .scope {
+                transition: all 1.3s ease-in-out;
+                position: relative;
+                font-size: 1vw;
+
+
+
+
+                h3 {
+                    margin-top: 1vw;
+                    // padding: 0;
+                }
+
+
+
+
+
+
+            }
+
+
+        }
+
+
+        .contact {
+            @include buttonCustom(none, 20px, $primary, $dark);
+            @include paddingTBRL(0.5vw, 0.5vw, .8vw, .8vw);
+            @include buttonHoverCustom(solid 1px $primary, 20px, $dark, $primary);
+            font-size: 1vw;
+
+            transition: all 0.3s ease-in-out;
+
+        }
+
+        .selected_contact {
+            @include buttonCustom(solid 1px $primary, 20px, $dark, $primary);
+            @include paddingTBRL(0.5vw, 0.5vw, .8vw, .8vw);
+            @include buttonHoverCustom(solid 1px $primary, 20px, $dark, $primary);
+            font-size: 1vw;
+
+
+            transition: all 0.3s ease-in-out;
+
+        }
+    }
+
+
+}
+
+@media screen and (max-width: $mobile) {
+    .nav {
+        height: 10vw;
+        position: relative;
+
+        .logo {
+            display: none;
+        }
+
+        .mlogo {
+            display: block;
+
+            img {
+                width: 20vw;
+                height: max-content;
+            }
+        }
+
+
+        .links {
+            display: none;
+        }
+
+        .mlinks {
+            display: block;
+
+            img {
+                width: 5vw;
+                height: max-content;
+                margin-right: 10vw;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                background-color: $dark;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 1vw;
+
+                .closebtn {
+                    position: absolute;
+                    top: 2vw;
+                    right: .1vw;
+                    color: $light;
+
+                    img {
+                        width: 5vw;
+                        height: max-content;
+                    }
+                }
+
+
+
+                ul {
+                    width: 100%;
+                    height: 80vh;
+                    @include flexContentSpaceEvenly;
+                    padding-top: 15vw;
+                    flex-direction: column;
+                    align-items: center;
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 2vw;
+
+                        a {
+                            font-size: 3vw;
+                            text-decoration: none;
+                            color: $light;
+                            width: max-content;
+                            height: max-content;
+                        }
+                    }
+                }
+            }
+
+            .sidenav_close {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                background-color: $dark;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 1vw;
+
+                .closebtn {
+                    position: absolute;
+                    top: 2vw;
+                    right: .1vw;
+                    color: $light;
+
+                    img {
+                        width: 5vw;
+                        height: max-content;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    height: 80vh;
+                    @include flexContentSpaceEvenly;
+                    padding-top: 15vw;
+                    flex-direction: column;
+                    align-items: center;
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 2vw;
+
+                        a {
+                            font-size: 3vw;
+                            text-decoration: none;
+                            color: $light;
+                            width: max-content;
+                            height: max-content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

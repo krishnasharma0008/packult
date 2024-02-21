@@ -1,0 +1,62 @@
+@import "../theme.scss";
+
+.carrers_card{
+    .card_heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            font-size: 3vw;
+            color: $dark;
+            font-family: "Visby SemiBold";
+            width: 50vw;
+        }
+        button{
+            height: 5vw;
+            background-color: $primary;
+            border: none;
+            border-radius: 5vw;
+            padding: 1vw 5vw;
+            font-size: 2.3vw;
+            color: $light;
+            font-family: "Visby Regular";
+            text-decoration: underline;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+          
+        }
+    }
+
+    .card_content{
+        p{
+            font-size: 2.3vw;
+            letter-spacing: 0.1vw;
+            color: $dark;
+            font-family: "Visby Regular";
+            margin-top: 2vw;
+        }
+        .card_content_buttons{
+            display: flex;
+            gap: 2vw;
+            button{
+                box-shadow: 0 0 0.5vw $primary;
+                border: none;
+                border-radius: 5vw;
+                padding: 1vw 5vw;
+                background-color: $light;
+                font-size: 2.3vw;
+                font-family: "Visby Medium";
+                color: $dark;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                
+
+            }
+        }
+        
+    }
+    hr{
+        margin-top: 3vw;
+    }
+}

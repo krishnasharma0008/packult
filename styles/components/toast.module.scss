@@ -1,0 +1,23 @@
+@import "../theme.scss";
+
+
+.toast {
+    position: fixed;
+    top: 1vw;
+    border: .1vw solid rgb(255, 17, 0, 0.767);
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0 .5vw 0 rgba(0, 0, 0, 0), 0 .5vw .5vw 0 rgba(0, 0, 0, 0.19);
+
+
+    p {
+        margin: 0;
+        font-size: 1.5vw;
+        font-family: 'Visby Regular';
+        color: rgba(255, 17, 0, 0.767);
+
+    }
+
+
+}

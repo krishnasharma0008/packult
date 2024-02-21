@@ -1,0 +1,993 @@
+@import "./theme.scss";
+@import "./utils.scss";
+@import "../asset/visby-cufonfonts-webfont/style.css";
+
+.mobile_particles {
+  display: none;
+}
+
+.lap_particles {
+  display: block;
+}
+
+.tablet_particles {
+  display: none;
+}
+
+.langingPage {  
+  position: relative;
+  margin-top: 4.9vw;
+  //height: 40vw;
+  width: 100%;
+  background-image: url("/assets/images/packarma/Hero Banner.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center center;   
+
+  // &:before {
+  //   margin-top: 0.08vw;
+  //   content: ""; /* Required for pseudo-elements */
+  //   position: absolute;
+  //   top: 0;
+  //   right: 5vw;
+  //   left: 5vw;
+  //   width: calc(100% - 10vw);
+  //   height: 1px; /* Thickness of the top border */
+  //   border-top: 1px solid;
+  //   border-image-source: linear-gradient(270deg, #000000 0%, #E66FF1 42.25%, #73A3F4 70.25%, #000000 101.81%);
+  //   border-image-slice: 1;
+  // }
+
+
+  .content {
+    display: flex;
+
+    // img {            
+    //   width: 85.97vw;
+    //   height: 0.06vw;
+    // }
+
+    .left{
+      width: 55%;
+  
+      .ellipse {
+        //height: 100vh;
+        // width: 100%;
+        // background-image: url("/assets/images/packarma/ellipse.png");
+        // background-repeat: no-repeat;
+        // background-size: contain; 
+
+        .details {
+          padding: 4vw 4vw;
+
+          // img {            
+          //   width: 7.38vw;
+          //   height: 7.67vw;
+          // }
+
+          h2 {
+            //margin-top: 1vw;
+            margin: 0%;           
+            color: #FFF;
+            font-family: 'Open Sans' ;
+            font-size: 4.23vw;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 5.29vw; /* 109.375% */
+            letter-spacing: 0.02em;
+            
+  
+            span {
+              color: #C2D950;
+              font-family: 'Visby';
+              font-size: 4.23vw;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 5.29vw;
+              letter-spacing: 0.02em;
+              text-transform: uppercase;
+            }            
+          }
+
+          p {
+            margin-top: 0vw;
+            font-family: 'Visby Regular';
+            font-size: 1.46vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.32vw; /* 90.909% */
+            letter-spacing: 10%;
+          }    
+          
+          .qr_codes {
+            margin-top: 8vw;
+            display: flex;             
+            gap: 2vw;
+
+            img {
+              width: 5.76vw;
+              height: 5.82vw;
+              flex-shrink: 0;
+            }
+
+            h5 {
+              flex-direction: column;
+              margin: 0;
+              width: 24vw;
+              height: 1.52vw;
+              flex-shrink: 0;
+
+              color: white;
+              font-family: 'Visby Regular';
+              font-size: 1.46vw;
+              font-weight: 500;
+              line-height: 1.65vw; /* 113.636% */
+              letter-spacing: 2%;
+
+              .apple_play_store {
+                display: flex;              
+                gap: 0.5vw;
+                justify-content: start;
+                margin-top: 1vw;
+  
+                img {
+                    width: 8vw;
+                    cursor: pointer;
+                    height: max-content;
+                }
+              }
+            }
+          }
+        }
+      }    
+      
+    }
+
+    .right {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      //height: 100vh;
+      padding-top: 4vw;
+
+      img {
+        //margin-top: 2vw;
+          width: 27vw;
+          height: 33.06vw;
+      }
+    }
+  
+  }
+}
+
+.intro {
+  position: relative;
+  //min-height: 60vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .bgRectangle {
+    position: absolute;
+    top: 5vw;
+    left: 25vw;
+    z-index: -1;
+    width: 50vw;
+    height: 30vw;
+    background: $primary;
+    background: linear-gradient(216.05deg, #00BDF8 0%, #87BE42 61.29%);//, #C2D950 100%);
+    filter: blur(1vw);
+}
+
+  .content {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+
+    .left {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            font-size: 3.31vw;
+            font-family: 'Visby Bold';
+            margin-bottom: 0vw;
+            list-style: 4.067vw;
+            font-weight: 500;
+            color:rgb(255, 255, 255);
+
+            img {
+              margin: 0 1vw;
+              width: 1.5vw;
+              height: max-content;
+              transition: all 0.5s ease-in-out;
+
+          }
+
+          &:hover {
+              img {
+                  transform: rotate(-135deg) scale(1.2);
+                  transition: all 0.5s ease-in-out;
+              }
+          }
+        }
+        
+        .carousel {
+            display: flex;
+            flex-direction: column;
+            padding: 0 3vw;
+            justify-content: center;
+            align-items: center;
+            //height: 25vw;
+            //margin-left: 15vw;
+            //margin-right: 20vw;
+            //margin-bottom: 3vw;
+            //background-color: #000000;
+        }
+    }
+  }
+}
+
+.mobintro {
+  position: relative;
+  min-height: 60vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .bgRectangle {
+    position: absolute;
+    top: 5vw;
+    left: 20vw;
+    z-index: -1;
+    width: 50vw;
+    height: 30vw;
+    background: $primary;
+    background: linear-gradient(216.05deg, #00BDF8 0%, #87BE42 61.29%, #C2D950 100%);
+    filter: blur(1vw);
+}
+
+  .content {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;    
+
+    .left {        
+        text-align: center;
+        width: 100%;
+
+        h3 {
+          color:rgb(255, 255, 255);
+          cursor: pointer;
+          font-family: 'Visby SemiBold';
+          font-size: 1.5vw;
+          letter-spacing: 0.15vw;
+
+          img {
+              width: 1vw;
+              height: max-content;
+          }
+
+          &:hover {
+              color: $light;
+
+              img {
+                  transform: rotate(-135deg);
+                  transition: all 0.5s ease-in-out;
+              }
+          }
+      }
+
+
+        .carousel {
+            display: flex;
+            flex-direction: column;
+            padding: 0 3vw;
+            justify-content: center;
+            align-items: center;
+            height: 25vw;
+            margin-left: 10vw;
+            margin-right: 20vw;
+            margin-bottom: 3vw;
+            //background-color: #000000;
+        }
+    }
+  }
+}
+
+.features {
+  padding: 0 10vw;
+  //margin-top: 5vw;
+  
+  .component{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5vw;
+  
+
+  .left {
+    width: 30%;
+    
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;   
+      //gap:3vw;            
+
+        ul {
+          margin: 0;          
+
+          li {           
+              list-style-type: none; /* Remove default list-style */
+              padding-left: 3vw; /* Adjust based on your image size + spacing */
+              margin-bottom: 2vw;
+              font-size: 1.32vw;
+              font-weight: 400;
+              font-family: 'Visby Medium';
+              position: relative;
+              color: #0F001A;
+              line-height: 1.59vw;
+          }
+
+          li h3 {
+            font-family: 'Visby Bold';
+            margin-bottom: 0.4vw;
+            font-size: 1.58vw;
+            font-weight: 500;
+            line-height: 1.57vw;
+            //letter-spacing: 0.02em;
+            text-align: left;
+          }
+
+          li::before {
+            content: '';
+            position: absolute;
+            left: 0; /* Adjust if you need */
+            /* Center vertically */
+            transform: translateY(-50%); /* Adjust to perfectly center if needed */
+            width: 2vw;
+            height: 2vw;
+            //background-image: url('/assets/images/packarma/benefiticon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+          }   
+
+          li:nth-child(1)::before {
+            top: 7%;
+            background-image: url('/assets/images/packarma/categrasied.png');
+          }
+        
+          li:nth-child(2)::before {
+            top: 12%;
+            background-image: url('/assets/images/packarma/subcription.png');
+          }       
+        }
+      }
+      
+      
+    }
+  
+  .middle {
+    width: 40%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    img {
+            height: max-content;
+            width: 14.5vw;
+            margin: 0;
+            border-radius: 1vw;
+            // background-color: #87BE42;
+        }
+    }
+    .right {
+      width: 30%;
+      
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        //gap:3vw;            
+  
+          ul {
+            margin: 0;          
+  
+            li {           
+              list-style-type: none; /* Remove default list-style */
+              padding-left: 3vw; /* Adjust based on your image size + spacing */
+              margin-bottom: 2vw;
+              font-size: 1.32vw;
+              font-weight: 400;
+              font-family: 'Visby Medium';
+              position: relative;
+              color: #0F001A;
+              line-height: 1.59vw;
+          }
+
+          li h3 {
+            font-family: 'Visby Bold';
+            margin-bottom: 0.4vw;
+            font-size: 1.58vw;
+            font-weight: 500;
+            line-height: 1.57vw;
+            //letter-spacing: 0.02em;
+            text-align: left;
+          }
+  
+            li::before {
+              content: '';
+              position: absolute;
+              left: 0; /* Adjust if you need */
+              //top: 13%; /* Center vertically */
+              transform: translateY(-50%); /* Adjust to perfectly center if needed */
+              width: 2vw;
+              height: 2vw;
+              //background-image: url('/assets/images/packarma/banner_adv.png');
+              background-repeat: no-repeat;
+              background-size: contain;
+            }    
+            li:nth-child(1)::before {
+              top: 8%;
+              background-image: url('/assets/images/packarma/search_hist.png');
+            }
+          
+            li:nth-child(2)::before {
+              top: 12%;
+              background-image: url('/assets/images/packarma/banner_adv.png');
+            }       
+          }
+        }
+    }
+  }
+}
+
+.benifits {
+  padding: 0 10vw;
+  margin-top: 5vw;
+
+  h3 {
+    font-size: 1.85vw;
+    font-weight: 300;
+    font-family: 'Visby Regular';
+    //font-style: italic;
+    //list-style: 1.83vw;
+    line-height: 2.52vw;
+    margin-bottom: 0vw;
+  }
+
+  .content {
+            display: flex;
+            padding: 2vw 0;    
+
+    .left {
+      width: 50%;
+
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      img {
+        width: max-content;
+        height: 22vw;
+        margin: auto;
+        display: block;
+      }
+      
+    }
+
+    .right {
+      width: 50%;
+
+      h2 {
+        font-size: 1.65vw;
+        font-family: 'Visby SemiBold';
+        font-weight: 500;
+        //font-style: italic;
+        line-height: 1.63vw;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.32vw;
+        font-family: 'Visby Regular';
+        font-weight: 500;
+        line-height: 1.58vw;
+        text-align: justify;
+      }
+
+      .apple_play_store {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1vw;
+        //justify-content: center;
+
+        img {
+            width: 8vw;
+            cursor: pointer;
+            height: max-content;
+        }
+      }
+    }
+  }
+}
+
+
+.aboutusHead {
+  padding: 0 10vw;
+  //margin-top: 5vw;
+}
+
+.aboutus {
+    padding: 0 10vw;
+    //margin-top: 5vw;
+    background-color: #F8FFD7;
+
+    .component {
+        &:nth-child(odd) {
+            .content {
+                flex-direction: row-reverse;
+
+                h2 {
+                    color: $primary;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 10vw;
+            margin-bottom: 4vw;
+            margin-top: 2vw;
+
+            p {
+                font-size: 1.58vw;
+                font-family: 'Visby Regular';
+                font-weight: 300;
+                //font-style: italic;
+                line-height: 2.24vw;
+            }
+            
+
+            h2 {
+                font-size: 2.5vw;
+                font-family: 'Visby Bold';
+                cursor: pointer;
+
+                img {
+                    margin: 0 1vw;
+                    width: 1.5vw;
+                    height: max-content;
+                    transition: all 0.5s ease-in-out;
+
+                }
+
+                &:hover {
+                    img {
+                        transform: rotate(-135deg) scale(1.2);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+
+            img {
+                width: 30vw;
+                height: max-content;
+                margin: 0;
+            }
+
+            ul {
+                cursor: pointer;
+
+                li {
+                    font-size: 1.5vw;
+                    color: $dark;
+                    font-family: 'Visby Bold';
+                    text-decoration: underline;
+                    line-height: 3vw;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $primary;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+            }
+
+            .all_services {
+                background-color: #87BE42;
+            }
+        }
+
+        .all_services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2vw;
+
+            margin: 5vw 0;
+
+            a {
+                display: flex;
+                justify-content: center;
+                border-radius: 1vw;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+                h2 {
+                    font-size: 1.5vw;
+                    font-family: 'Visby Bold';
+
+                    img {
+                        margin: 0 1vw;
+                        width: 2vw;
+                        height: max-content;
+                        transition: all 0.3s ease-in-out;
+
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0px 4px 8px $primary;
+
+                    img {
+                        transform: scale(0.5) rotateZ(-135deg) translateY(-1vw);
+                        transition: all 0.3s ease-in-out;
+
+
+                    }
+                }
+            }
+        }
+
+        .all_services_button {
+            display: flex;
+            margin: 5vw 0;
+
+
+            hr {
+                width: 30%;
+                height: 0.1vw;
+                background-color: rgba(0, 0, 0, 0.400);
+                border: none;
+                align-self: center
+            }
+
+            a {
+                background-color: $primary;
+                color: $light;
+                font-size: $button;
+                font-family: 'Visby Bold';
+                padding: 1vw 2vw;
+                border-radius: 2.5vw;
+                // drop shadow
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+                &:hover {
+
+                    background-color: $light;
+                    color: $primary;
+                    box-shadow: 0px 4px 8px $primary;
+                    transition: all 0.5s ease-in-out;
+
+                }
+
+            }
+
+
+        }
+    }
+}
+
+.videoCarousel {
+  padding: 0 10vw;
+  margin-top: 5vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.customers {
+  background-color: $dark;
+  color: $light;
+  padding: 0 10vw;
+
+  .content {
+      display: flex;
+      flex-direction: column;
+      gap: 5vw;
+      justify-content: center;
+      align-items: center;
+
+      .left {
+          width: 100%;
+          text-align: center;
+
+          h2 {
+              font-size: 2vw;
+              font-family: 'Visby Regular';
+              margin-bottom: 3vw;
+              line-height: 3vw;
+          }
+
+          hr {
+              width: 100%;
+              height: 0.1vw;
+              background-color: rgba(255, 255, 255, 0.400);
+              border: none;
+              align-self: center;
+              margin-bottom: 3vw;
+          }
+
+          p {
+              font-size: 1.1vw;
+              font-family: 'Visby Thin';
+              line-height: 2.5vw;
+              letter-spacing: .2vw;
+
+          }
+
+          h4 {
+              font-size: 1vw;
+              font-family: 'Visby Thin';
+              line-height: 2.5vw;
+              letter-spacing: .2vw;
+
+              span {
+                  font-size: 1.5vw;
+                  font-family: 'Visby Bold';
+                  margin-right: 2vw;
+              }
+          }
+
+          img {
+              width: 15vw;
+              height: max-content;
+          }
+
+          .carousel {
+              display: flex;
+              flex-direction: column;
+              padding: 0 3vw;
+              justify-content: center;
+              align-items: center;
+              height: 25vw;
+              margin-left: 10vw;
+              margin-right: 10vw;
+              margin-bottom: 3vw;
+          }
+      }
+  }
+
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+  .lap_particles {
+    display: none;
+  }
+
+  .mobile_particles {
+    display: none;
+  }
+
+  .tablet_particles {
+    display: block;
+  }
+
+  .intro {
+    position: relative;
+    //min-height: 60vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  
+    .bgRectangle {
+      position: absolute;
+      top: 5vw;
+      left: 20vw;
+      z-index: -1;
+      width: 50vw;
+      height: 30vw;
+      background: $primary;
+      background: linear-gradient(216.05deg, #C2D950 0%, #87BE42 61.29%, #00BDF8 100%);
+      filter: blur(1vw);
+  }
+  
+    .content {
+      display: flex;
+      flex-direction: column;    
+      justify-content: center;
+      align-items: center;
+      padding-top: 1rem;
+  
+      .left {
+          width: 100%;
+          text-align: center;
+  
+          h2 {
+              font-size: 4.89vw;
+              font-family: 'Visby';
+              margin-bottom: 0vw;
+              list-style: 6vw;
+              font-weight: 500;
+              color:rgb(255, 255, 255);
+  
+              img {
+                margin: 0 1vw;
+                width: 1.5vw;
+                height: max-content;
+                transition: all 0.5s ease-in-out;
+  
+            }
+  
+            &:hover {
+                img {
+                    transform: rotate(-135deg) scale(1.2);
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+          }
+          
+          .carousel {
+              display: flex;
+              flex-direction: column;
+              padding: 0 3vw;
+              justify-content: center;
+              align-items: center;
+          }
+      }
+    }
+  }
+}
+
+.blog {
+  //padding: 0 10vw;
+  margin-top: 5vw;
+}
+.contact {
+  //padding: 0 10vw;
+  margin-top: 5vw;
+}
+
+@media screen and (max-width: $mobile) {
+  .lap_particles {
+    display: none;
+  }
+
+  .mobile_particles {
+    display: block;
+  }
+
+  .tablet_particles {
+    display: none;
+  }
+
+  
+  .langingPage {  
+    width: 100%;
+    //height: 569px;   
+    background-image: none;
+    background-color: #000000;
+    margin-top: 0vw;
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+      // background-image: url("/assets/images/packarma/ellipse.png");
+      // background-repeat: no-repeat;
+      // background-size: contain;
+
+      .row1 {
+        display: flex;       
+        margin-top: 3.14vw;
+        margin-left: 10vw;
+        gap: 1.94vw;
+
+      // img {            
+      //   width: 14.4vw;
+      //   height: 15.01vw;
+      // }
+
+      h2 {
+        width: 77.7vw;
+        margin: 0%;           
+        color: #FFF;
+        font-family: 'Open Sans' ;
+        font-size: 8.53vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 10.13vw; /* 109.375% */
+        letter-spacing: 0.17vw;
+        
+
+        span {
+          color: #C2D950;
+          font-family: 'Visby Regular';
+          font-size: 8.53vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 10.13vw;
+          letter-spacing: 0.17vw;
+          text-transform: uppercase;
+        }            
+      }
+
+      p {
+        margin-top: 0vw;
+        font-family: 'Visby Regular';
+        font-size: 4.27vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 5.33vw; /* 90.909% */
+        letter-spacing: 0.085px;
+      } 
+      }
+
+      .row2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        //height: 100vh;
+        background-image: url("/assets/images/packarma/row2back.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+  
+        img {
+            width: 74.3vw;
+            height: 92vw;
+        }
+      }
+      .qr_codes {
+        margin-top: 5vw;
+        margin-left: 10vw;
+        display: flex;             
+        gap: 2vw;
+
+        img {
+          width: 17.8vw;
+          height: 18vw;
+          flex-shrink: 0;
+        }
+
+        h5 {
+          flex-direction: column;
+          margin: 0;
+          width: 50vw;
+          //height: 1.52vw;
+          flex-shrink: 0;
+
+          color: #FFF;
+          font-family: "Visby Regular";
+          font-size: 3.72vw;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 5.8vw; /* 113.636% */
+          letter-spacing: 0.74vw;
+
+          .apple_play_store {
+            display: flex;              
+            gap: 0.5vw;
+            justify-content: start;
+            margin-top: 0.3vw;
+
+            img {
+                width: 21.66vw;
+                cursor: pointer;
+                height: max-content;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

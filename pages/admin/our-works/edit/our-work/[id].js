@@ -1,0 +1,201 @@
+import Image from "next/image"
+import { useState } from 'react'
+import AdminLayout from "../../../../../components/admin/adminLayout"
+import styles from "../../../../../styles/admin/components/new-work.module.scss"
+import { useRouter } from "next/router"
+import { ADMIN_ROUTES } from "../../../../../common/routes"
+import { updateImageArray } from "../../../../../utils/firebase_image_upload"
+import { deleteDataById, getDataById, uploadData } from "../../../../../utils/firebase_data_handler"
+import { queryClient } from "../../../../_app"
+import { useQuery } from "@tanstack/react-query"
+function OurWorkEdit() {
+
+    const router = useRouter()
+    const params = router.query
+    const [updating, setUpdating] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [imageData, setImageData] = useState([
+        {
+            id: "image1",
+            url: ""
+        },
+        {
+            id: "image2",
+            url: ""
+        },
+        {
+            id: "image3",
+            url: ""
+        },
+        {
+            id: "image4",
+            url: ""
+        },
+
+    ])
+    const placeHolder = "Quisque ut tortor orci. Donec ullamcorper consequat nisi vel pharetra. Donec lobortis mauris id nunc posuere iaculis. Praesent ut finibus mi. Nam id mi nec magna imperdiet suscipit. Aliquam odio ligula, gravida in diam quis, accumsan fringilla enim. Sed volutpat pulvinar nunc sit amet lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nunc quis sapien finibus luctus. Nunc vel malesuada erat. Duis ac egestas dui. Ut dapibus, lacus in rutrum fringilla, dolor nulla porttitor odio, vitae pellentesque sem ante eu sapien. Sed eu ex a justo ullamcorper venenatis eget sed ex. Sed consectetur ex vitae dui tincidunt, sed tincidunt est pharetra. Proin id ligula justo. Morbi dictum nulla orci."
+    const ourWorksData = useQuery(
+        ["our_works_v2", params.id],
+        () => {
+            return getDataById(`Our_Works_V2/${params.id}`)
+        },
+        {
+            staleTime: 10000 * 60,
+            enabled: !!params.id
+        }
+    )
+
+    const handleImageData = (e, id) => {
+        const file = e.target.files[0]
+        const reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onloadend = () => {
+            const newImageData = imageData.map(image => {
+                if (image.id === id) {
+                    return {
+                        id: image.id,
+                        url: reader.result
+                    }
+                }
+                else {
+                    return image
+                }
+            })
+            setImageData(newImageData)
+        }
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setLoading(true)
+
+        const title = e.target[0].value
+        const image1 = e.target[1].files[0]
+        const para1 = e.target[2].value
+        const para2 = e.target[3].value
+        const image2 = e.target[4].files[0]
+        const image3 = e.target[5].files[0]
+        const image4 = e.target[6].files[0]
+        const para3 = e.target[7].value
+        const para4 = e.target[8].value
+        const imageArray = [
+            {
+                id: "image1",
+                file: image1
+            },
+            {
+                id: "image2",
+                file: image2
+            },
+            {
+                id: "image3",
+                file: image3
+            },
+            {
+                id: "image4",
+                file: image4
+            },
+        ]
+        var newImageArray = []
+
+        imageArray.forEach(element => {
+            // check if image is file or undefined
+            if (element.file !== undefined) {
+                newImageArray.push(element)
+            }
+        });
+        const oldImageArray = ourWorksData.data?.data.images
+
+        const slug = title.toLowerCase().split(" ").join("-")
+
+        const resp = updateImageArray(oldImageArray, newImageArray, "Our_Works_V2")
+        resp.then((res) => {
+            const data = {
+                title,
+                slug,
+                para1,
+                para2,
+                para3,
+                para4,
+                images: res.data
+            }
+
+            uploadData(data, "Our_Works_V2", slug).then((res) => {
+                if (res.message === "success") {
+                    alert("Work Updated");
+                    // delte previos document
+                    if (ourWorksData.data?.data.slug !== slug)
+                        deleteDataById(`Our_Works_V2/${params.id}`)
+                    queryClient.invalidateQueries("our_works_v2");
+                    setLoading(false);
+                    router.push(ADMIN_ROUTES.OUR_WORKS)
+                }
+                else {
+                    alert("Something went wrong");
+                    setLoading(false);
+                }
+            })
+
+        })
+    }
+
+
+    return (
+        <AdminLayout>
+            <div className={styles.newWork}>
+                {
+                    loading ? <h3>Loading...</h3> : ourWorksData.isLoading ? <h3>Loading...</h3> : updating ? <h3>Updating...</h3> :
+                        <form onSubmit={handleSubmit}>
+                            <input type="text" defaultValue={ourWorksData.data?.data.title} placeholder="Title" />
+                            <label htmlFor="new_work_image1">
+                                <Image src={
+                                    imageData.find((image) => image.id === "image1").url ||
+                                    ourWorksData?.data?.data.images.find((image) => image.id === "image1").url
+                                } height={1000} width={1000} alt="our work" />
+                            </label>
+                            <input onChange={
+                                (e) => handleImageData(e, "image1")
+                            } type="file" id="new_work_image1" />
+                            <textarea defaultValue={ourWorksData.data?.data.para1} cols="30" rows="10" placeholder={placeHolder}></textarea>
+                            <textarea defaultValue={ourWorksData.data?.data.para2} cols="30" rows="10" placeholder={placeHolder}></textarea>
+                            <div className={styles.images2} >
+                                <label htmlFor="new_work_image2">
+                                    <Image src={
+                                        imageData.find((image) => image.id === "image2").url ||
+                                        ourWorksData?.data?.data.images.find((image) => image.id === "image2").url
+                                    } height={1000} width={1000} alt="our work" />
+                                </label>
+                                <input onChange={
+                                    (e) => handleImageData(e, "image2")
+                                } type="file" id="new_work_image2" />
+                                <label htmlFor="new_work_image3">
+                                    <Image src={
+                                        imageData.find((image) => image.id === "image3").url ||
+                                        ourWorksData?.data?.data.images.find((image) => image.id === "image3").url
+                                    } height={1000} width={1000} alt="our work" />
+                                </label>
+                                <input onChange={
+                                    (e) => handleImageData(e, "image3")
+                                } type="file" id="new_work_image3" />
+                            </div>
+                            <label htmlFor="new_work_image4">
+                                <Image src={
+                                    imageData.find((image) => image.id === "image4").url ||
+                                    ourWorksData?.data?.data.images.find((image) => image.id === "image4").url
+                                } height={1000} width={1000} alt="our work" />
+                            </label>
+                            <input onChange={
+                                (e) => handleImageData(e, "image4")
+                            } type="file" id="new_work_image4" />
+                            <textarea defaultValue={ourWorksData.data?.data.para3} cols="30" rows="10" placeholder={placeHolder}></textarea>
+                            <textarea defaultValue={ourWorksData.data?.data.para4} cols="30" rows="10" placeholder={placeHolder}></textarea>
+                            <button type="submit" >Update</button>
+                        </form>
+                }
+
+            </div>
+        </AdminLayout>
+    )
+}
+
+export default OurWorkEdit

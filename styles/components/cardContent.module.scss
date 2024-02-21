@@ -1,0 +1,166 @@
+@import "../theme.scss";
+
+.cardContent {
+    display: flex;
+    margin: 10vw 2vw;
+    gap: 4vw;
+    margin-bottom: 0vw;
+
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .content {
+        // width: 40vw;
+        .heading {
+            display: flex;
+            gap: 2vw;
+            align-items: center;
+
+            h3 {
+                font-family: "Visby bold";
+                font-size: 8vw;
+                font-weight: 500;
+                margin: 0;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: .05vw;
+                color: $dark;
+            }
+
+            h2 {
+                font-family: "Visby bold";
+                letter-spacing: .5vw;
+                line-height: 4vw;
+                font-size: 4vw;
+                font-weight: 500;
+                margin: 0;
+                width: 30vw;
+                color: $primary;
+            }
+
+        }
+
+        p {
+            font-family: "Visby regular";
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            letter-spacing: .1vw;
+            line-height: 2.1vw;
+            width: 100%;
+            color: $dark;
+
+            span {
+                color: $primary;
+                text-decoration: underline;
+
+            }
+        }
+
+        a {
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            line-height: 2.1vw;
+            width: 100%;
+            color: $dark;
+            text-decoration: none;
+            font-weight: 1000;
+            text-decoration: underline;
+            font-family: "Visby medium";
+            display: flex;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $primary;
+                transition: all .3s ease-in-out;
+
+            }
+        }
+    }
+
+    .image {
+        img {
+            width: 30vw;
+            height: max-content;
+            border-radius: 3vw;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .cardContent {
+        display: flex;
+        margin: 10vw 2vw;
+        gap: 4vw;
+        margin-bottom: 0vw;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .content {
+
+            // width: 40vw;
+            .heading {
+                display: flex;
+                gap: 2vw;
+
+                h1 {
+                    font-family: "Visby bold";
+                    font-size: 8vw;
+                    font-weight: 500;
+                    margin: 0;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: .05vw;
+                    color: $dark;
+                }
+
+                h2 {
+                    font-family: "Visby bold";
+                    letter-spacing: .5vw;
+                    font-size: 4vw;
+                    font-weight: 500;
+                    margin: 0;
+                    width: 3vw;
+                    color: $primary;
+                }
+
+            }
+
+            p {
+                font-family: "Visby regular";
+                margin-top: 1vw;
+                font-size: 2vw;
+                letter-spacing: .1vw;
+                line-height: 2.5vw;
+                width: 100%;
+                color: $dark;
+
+            }
+
+            a {
+                margin-top: 2vw;
+                font-size: 2vw;
+                line-height: 2.1vw;
+                width: 100%;
+                color: $dark;
+                text-decoration: none;
+                font-weight: 1000;
+                text-decoration: underline;
+                font-family: "Visby medium";
+                display: flex;
+                transition: all .3s ease-in-out;
+
+            }
+        }
+
+        .image {
+            img {
+                margin-top: 2vw;
+                width: 30vw;
+                border-radius: 3vw;
+                height: max-content;
+            }
+        }
+    }
+}

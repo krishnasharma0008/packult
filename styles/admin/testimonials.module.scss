@@ -1,0 +1,101 @@
+@import "../theme.scss";
+
+.testimonials {
+  width: 85vw;
+  margin-left: 15vw;
+  padding: 1vw 5vw 5vw 5vw;
+
+  h2 {
+    font-family: "Visby Bold";
+    font-size: 2.5vw;
+    color: $primary;
+    margin: 0;
+  }
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+
+    button {
+      border: none;
+      color: white;
+      padding: 0.5vw 1vw;
+      border-radius: 0.5vw;
+      font-family: "Visby Bold";
+      font-size: 1vw;
+      cursor: pointer;
+    }
+  }
+
+  /* Set the table to have a width of 100% */
+  table {
+    border-collapse: collapse;
+
+    width: 100%;
+    td {
+      text-overflow: ellipsis;
+      // background-color: black;
+      padding: 20px 10px;
+      &:last-child {
+        text-align: center;
+        gap: 2vw;
+
+        svg {
+          &:hover {
+            transition: all 0.3s ease-in-out;
+
+            &:nth-child(2) {
+              color: green;
+            }
+
+            &:last-child {
+              color: red;
+            }
+
+            &:first-child {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+    th {
+      padding: 10px 10px;
+      &:last-child {
+        text-align: center;
+      }
+    }
+
+    tr {
+      border: 1px solid #ddd;
+    }
+  }
+
+  /* Hide certain columns on small screens */
+  @media (max-width: 768px) {
+    th:nth-child(3),
+    td:nth-child(3) {
+      display: none;
+    }
+  }
+
+  /* Make the remaining columns narrower on small screens */
+  @media (max-width: 768px) {
+    th:nth-child(1),
+    td:nth-child(1),
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 50%;
+    }
+  }
+
+  /* Add horizontal scroll bar for smaller screens */
+  @media (max-width: 576px) {
+    table {
+      overflow-x: scroll;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../theme.scss";
+
+
+.blogs {
+    width: 85vw;
+    margin-left: 15vw;
+    padding: 1vw 5vw 5vw 5vw;
+
+    h2 {
+        font-family: "Visby Bold";
+        font-size: 2.5vw;
+        color: $primary;
+        margin: 0;
+    }
+
+    .all_blogs {
+        margin-top: 2vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(23vw, 1fr));
+        grid-row-gap: 5vw;
+
+     
+    }
+}
+
+.create{
+    width: 85vw;
+    margin-left: 15vw;
+    padding: 1vw 5vw 5vw 5vw;
+
+    h2{
+        font-family: "Visby Bold";
+        font-size: 2.5vw;
+        color: $primary;
+        margin: 0;
+    }
+
+    .layouts{
+        margin-top: 2vw;
+        display: flex;
+        gap: 1vw;
+        img{
+            width: 23vw;
+            height: 45vw;
+            object-fit: contain;
+            margin-right: 1vw;
+            cursor: pointer;
+
+            &:hover{
+                &data-title{
+                    display: block;
+                }
+            }
+        }
+    }
+}

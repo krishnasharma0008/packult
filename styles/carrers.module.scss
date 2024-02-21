@@ -1,0 +1,234 @@
+@import "./theme.scss";
+
+.mobile_particles {
+    display: none;
+}
+
+.lap_particles {
+    display: block;
+}
+
+.tablet_particles {
+    display: none;
+}
+
+.carrers {
+    padding: 10vw 10vw;
+
+    h1 {
+        font-size: 3vw;
+        color: $dark;
+        font-family: "Visby Bold";
+        width: 50vw;
+
+
+        span {
+            color: $dark;
+            position: relative;
+
+            .background {
+                position: absolute;
+                height: 1.5vw;
+                width: 100%;
+                background-color: $primary;
+                bottom: .5vw;
+                z-index: -1;
+            }
+        }
+    }
+
+    p {
+        font-size: 2vw;
+        color: $dark;
+        font-family: "Visby Regular";
+        width: 55vw;
+        margin-top: 2vw;
+        line-height: 3.5vw;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5vw;
+        margin-right: -10vw;
+        gap: 5vw;
+        overflow-x: auto;
+
+        // scrollbar
+        &::-webkit-scrollbar {
+            height: 1vw;
+
+            &-track {
+                background-color: $light;
+            }
+
+            &-thumb {
+                background-color: $primary;
+                border-radius: 1vw;
+            }
+
+            &-button {
+                display: none;
+            }
+        }
+
+        img {
+            width: max-content;
+            height: 30vw;
+            background-color: $light;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+
+        }
+    }
+
+    .content {
+        h3 {
+            font-size: 2vw;
+            color: $primary;
+            font-family: "Visby Medium";
+            margin-top: 5vw;
+        }
+
+        h1 {
+            font-size: 4vw;
+            color: $dark;
+            font-family: "Visby Bold";
+            margin-top: 1vw;
+            width: 80vw;
+        }
+
+        p {
+            font-size: 2vw;
+            color: $dark;
+            font-family: "Visby Regular";
+            margin-top: 1vw;
+            line-height: 3vw;
+            width: 80vw;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .mobile_particles {
+        display: block;
+    }
+
+    .lap_particles {
+        display: none;
+    }
+
+    .tablet_particles {
+        display: none;
+    }
+
+    .carrers {
+        padding: 10vw 10vw;
+
+        h1 {
+            font-size: 3.5vw;
+            color: $dark;
+            font-family: "Visby Bold";
+            width: 50vw;
+
+
+            span {
+                color: $dark;
+                position: relative;
+
+                .background {
+                    position: absolute;
+                    height: 2vw;
+                    width: 100%;
+                    background-color: $primary;
+                    bottom: .5vw;
+                    z-index: -1;
+                }
+            }
+        }
+
+        p {
+            font-size: 2.5vw;
+            color: $dark;
+            font-family: "Visby Regular";
+            width: 55vw;
+            margin-top: 2vw;
+            line-height: 3.5vw;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 5vw;
+            margin-right: -10vw;
+            gap: 5vw;
+            overflow-x: auto;
+
+            // scrollbar
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            img {
+                width: max-content;
+                height: 30vw;
+                background-color: $light;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+
+            }
+        }
+
+        .content {
+            h3 {
+                font-size: 2.5vw;
+                color: $primary;
+                font-family: "Visby Medium";
+                margin-top: 5vw;
+                letter-spacing: 0.1vw;
+            }
+
+            h1 {
+                font-size: 4.5vw;
+                color: $dark;
+                font-family: "Visby Bold";
+                margin-top: 1vw;
+                width: 80vw;
+            }
+
+            p {
+                font-size: 2.5vw;
+                color: $dark;
+                font-family: "Visby Regular";
+                margin-top: 1vw;
+                line-height: 3vw;
+                width: 80vw;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:$mobile ) and (max-width: $tablet) {
+    .lap_particles {
+        display: none;
+    }
+
+    .mobile_particles {
+        display: none;
+    }
+
+    .tablet_particles {
+        display: block;
+    }
+}

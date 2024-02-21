@@ -1,0 +1,35 @@
+# robots.txt 
+User-agent: Googlebot
+Allow: /
+Disallow: 
+User-agent: googlebot-image
+Allow: /
+Disallow: 
+User-agent: googlebot-mobile
+Allow: /
+Disallow: 
+User-agent: MSNBot
+Allow: /
+Disallow: 
+User-agent: Slurp
+Allow: /
+Disallow: 
+User-agent: Gigabot
+Allow: /
+Disallow: 
+User-agent: Robozilla
+Allow: /
+Disallow: 
+User-agent: baiduspider
+Allow: /
+Disallow: 
+User-agent: yahoo-mmcrawler
+Allow: /
+Disallow: 
+User-agent: yahoo-blogs/v3.9
+Allow: /
+Disallow: 
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://packult.com/sitemap.xml

@@ -1,0 +1,224 @@
+@import './theme.scss';
+
+.blog {
+    padding: 7vw 10vw 0 10vw;
+
+    a{
+        color: $primary;
+    }
+
+    h1{
+        font-size: 3vw;
+        font-family: 'Visby Bold';
+        color: $dark;
+        margin: 0;
+    }
+}
+
+.blog3 {
+    margin-bottom: 3vw;
+
+    img {
+        width: 100%;
+        height: 35vw;
+        object-fit: cover;
+        border-radius: 1vw;
+    }
+
+    h3 {
+        font-size: 2.5vw;
+        font-family: 'Visby Bold';
+        margin: 1vw 0;
+        color: $dark;
+    }
+
+    h5 {
+        font-size: 1vw;
+        font-family: 'Visby Medium';
+        margin: 1vw 0;
+        color: $secondary;
+    }
+
+    p {
+        font-size: 1vw;
+        font-family: 'Visby Medium';
+        margin: 1vw 0;
+        color: $dark;
+        line-height: 1.5vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1vw;
+    }
+}
+
+.blog2 {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+
+    img {
+        width: 100%;
+        height: 35vw;
+        object-fit: cover;
+        border-radius: 1vw;
+
+        &:nth-child(2) {
+            margin: 1vw 0;
+        }
+    }
+
+    h3 {
+        font-size: 2.5vw;
+        font-family: 'Visby Bold';
+        margin: 1vw 0;
+        color: $dark;
+    }
+
+    h5 {
+        font-size: 1vw;
+        font-family: 'Visby Medium';
+        margin: 1vw 0;
+        color: $secondary;
+    }
+
+    p {
+        font-size: 1vw;
+        font-family: 'Visby Medium';
+        margin: 1vw 0;
+        color: $dark;
+        line-height: 1.5vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .head {
+        img {
+            float: left;
+            width: 35vw;
+            height: 30vw;
+            object-fit: cover;
+            border-radius: 1vw;
+            cursor: pointer;
+            margin: 0 1.5vw 1vw 0;
+        }
+    }
+}
+
+.blog1 {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+
+    img {
+        width: 100%;
+        height: 35vw;
+        object-fit: cover;
+        border-radius: 1vw;
+    }
+
+    h3 {
+        font-size: 2.5vw;
+        font-family: 'Visby Bold';
+        margin: 1vw 0;
+        color: $dark;
+    }
+
+    h5 {
+        font-size: 1vw;
+        font-family: 'Visby Medium';
+        margin: 1vw 0;
+        color: $secondary;
+    }
+
+    p {
+        font-size: 1vw;
+        font-family: 'Visby Medium';
+        margin: 1vw 0;
+        color: $dark;
+        line-height: 1.5vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .images {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1vw;
+
+        img {
+            width: 48%;
+            height: 35vw;
+            object-fit: cover;
+            border-radius: 1vw;
+            cursor: pointer;
+            margin-bottom: 1vw;
+            object-fit: cover;
+        }
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1vw;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .blog{
+        margin-top: 15vw;
+        min-height: 80vh;
+
+        h1{
+            font-size: 6vw;
+        }
+    }
+    .blog1 {
+        h3 {
+            font-size: 4vw;
+        }
+
+        h5 {
+            font-size: 2vw;
+        }
+
+        p {
+            font-size: 2vw;
+            line-height: 3vw;
+            letter-spacing: 0.2vw;
+        }
+    }
+
+    .blog2 {
+        h3 {
+            font-size: 4vw;
+        }
+
+        h5 {
+            font-size: 2vw;
+        }
+
+        p {
+            font-size: 2vw;
+            line-height: 3vw;
+            letter-spacing: 0.2vw;
+        }
+    }
+
+    .blog3 {
+        h3 {
+            font-size: 4vw;
+        }
+
+        h5 {
+            font-size: 2vw;
+        }
+
+        p {
+            font-size: 2vw;
+            line-height: 3vw;
+            letter-spacing: 0.2vw;
+        }
+    }
+}

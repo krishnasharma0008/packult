@@ -1,0 +1,63 @@
+@import "../theme.scss";
+
+
+.auth_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 5vw;
+
+    img {
+        width: 40vw;
+        height: max-content;
+    }
+
+    form {
+        border: .1vw solid $primary;
+        border-radius: 1vw;
+        padding: 2vw;
+        // shadow to bottom
+        box-shadow: 0 0 1vw 0 rgba(0, 0, 0, 0), 0 1vw 1vw 0 rgba(0, 0, 0, 0.19);
+
+
+        label {
+            font-size: 2vw;
+            font-family: 'Visby Regular';
+            color: $dark;
+        }
+
+        input {
+            width: 30vw;
+            height: 3vw;
+            border: none;
+            border-radius: .5vw;
+            background-color: $light;
+            margin-bottom: 1vw;
+            font-size: 1.5vw;
+            font-family: 'Visby Regular';
+            padding: .5vw 1vw;
+            outline: solid .15vw $primary;
+            transition: all .3s ease-in-out;
+            margin-bottom: 2vw;
+            margin-top: .5vw;
+        }
+
+        button {
+            width: 32vw;
+            height: 4vw;
+            border: none;
+            border-radius: .5vw;
+            background-color: $primary;
+            margin-bottom: 1vw;
+            font-size: 2vw;
+            font-family: 'Visby Bold';
+            letter-spacing: .2vw;
+            color: $light;
+            transition: all .3s ease-in-out;
+            margin-top: .5vw;
+            cursor: pointer;
+        }
+    }
+}

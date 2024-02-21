@@ -1,0 +1,29 @@
+@import '../theme.scss';
+
+.new_blog {
+    width: 85vw;
+    margin-left: 15vw;
+    padding: 1vw 5vw 5vw 5vw;
+
+    .new_cmponent_button {
+        padding: .5vw;
+        width: max-content;
+        background-color: white;
+        color: $primary;
+        border: 3px dashed $primary;
+        border-radius: 5px;
+        font-family: "Visby Medium";
+        font-size: 1vw;
+        transition: all .3s ease-in-out;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary;
+            border: none;
+            color: white;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+}

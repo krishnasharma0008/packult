@@ -1,0 +1,115 @@
+@import '../theme.scss';
+
+.blogCarousel {
+    padding: 0 10vw;
+
+    .content {
+        margin: 0vw -10vw 0vw 0vw;
+        display: flex;
+        gap: 2vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        // scrollbar
+        &::-webkit-scrollbar {
+            height: 0.5vw;
+
+            &-track {
+                background: transparent;
+            }
+
+            &-thumb {
+                background: $primary;
+                border-radius: 1vw;
+            }
+
+            &-button {
+                display: none;
+            }
+        }
+
+
+        .card {
+            margin: 1vw;
+            margin-top: 3vw;
+            min-width: 30vw;
+            min-height: 15vw;
+            padding: 2.5vw;
+            border-radius: 2vw;
+            box-shadow: 0vw 0vw 1vw 0vw rgba(0, 0, 0, 0.2);
+
+            h5 {
+                font-size: 1vw;
+                font-family: 'Visby Regular';
+                color: rgb(119, 119, 119);
+                margin: 0;
+            }
+
+            h3 {
+                font-size: 1.8vw;
+                font-family: 'Visby Bold';
+                color: $dark;
+                margin: 0;
+                margin-top: .5vw;
+            }
+
+            p {
+                font-size: 1.3vw;
+                font-family: 'Visby Regular';
+                color: $dark;
+                margin: 0;
+                margin-top: 1vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .blogCarousel {
+        padding: 0 10vw;
+
+        .content {
+            margin: 0vw -10vw 0vw 0vw;
+
+            gap: 5vw;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .card {
+                margin: 1vw;
+                margin-top: 3vw;
+                min-width: 60vw;
+                height: 30vw;
+                padding: 5vw;
+                border-radius: 2vw;
+                box-shadow: 0vw 0vw 1vw 0vw rgba(0, 0, 0, 0.2);
+
+                h5 {
+                    font-size: 2.5vw;
+                    font-family: 'Visby Regular';
+                    color: rgb(119, 119, 119);
+                    margin: 0;
+                }
+
+                h3 {
+                    font-size: 3vw;
+                    font-family: 'Visby Bold';
+                    color: $dark;
+                    margin: 0;
+                    margin-top: 2vw;
+                }
+
+                p {
+                    font-size: 2.8vw;
+                    letter-spacing: 0.1vw;
+                    font-family: 'Visby Regular';
+                    color: $dark;
+                    margin: 0;
+                    margin-top: 2vw;
+                }
+            }
+        }
+    }
+}

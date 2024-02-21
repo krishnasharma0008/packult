@@ -1,0 +1,95 @@
+@import "../asset/visby-cufonfonts-webfont/style.css";
+// @import "~bootstrap/scss/bootstrap";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Visby Regular';
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.madeBy {
+    font-size: 1.2vw;
+    padding: 1vw;
+    color: white;
+    text-align: center;
+    background-color: #1E1E1E;
+    font-family: "Visby SemiBold";
+    cursor: pointer;
+
+
+
+
+    @media screen and (max-width: 900) {
+        font-size: 3vw;
+    }
+
+    @media screen and (max-width: 600) {
+        font-size: 6vw;
+    }
+
+}
+
+// circle following mouse
+#cursor {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    background-color: #c2d9508f;
+    outline: .2vw solid #C2D950;
+    outline-offset: .2vw;
+    z-index: 9999;
+    pointer-events: none;
+
+
+
+    span {
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        background-color: #C2D950;
+        z-index: 9999;
+        pointer-events: none;
+    }
+}
+
+
+
+img {
+    :hover {
+        +#cursor {
+            background-color: #c2d950;
+            outline: 1.0vw solid #C2D950;
+            outline-offset: 1.2vw;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #cursor {
+        display: none;
+    }
+}

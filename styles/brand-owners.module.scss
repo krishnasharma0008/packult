@@ -1,0 +1,89 @@
+@import './theme.scss';
+
+.mobile_particles {
+    display: none;
+}
+
+.lap_particles {
+    display: block;
+}
+
+.tablet_particles {
+    display: none;
+}
+
+.brandowners {
+    padding: 5vw 10vw;
+    padding-bottom: 0vw;
+
+    h1 {
+        font-size: 3.5vw;
+        font-weight: 700;
+        margin-bottom: 2vw;
+        font-family: "Visby Bold"
+
+    }
+
+    p {
+        width: 60vw;
+        font-size: 1.5vw;
+        line-height: 2.1vw;
+        font-family: "Visby Regular";
+    }
+
+    .brandowners__content {
+        margin-top: 8vw;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .lap_particles {
+        display: none;
+    }
+
+    .mobile_particles {
+        display: block;
+    }
+
+    .tablet_particles {
+        display: none;
+    }
+
+    .brandowners {
+        padding: 10vw 10vw;
+        padding-bottom: 0vw;
+
+        h1 {
+            font-size: 4vw;
+            font-weight: 700;
+            margin-bottom: 2vw;
+            font-family: "Visby Bold"
+
+        }
+
+        p {
+            font-size: 2vw;
+            line-height: 3vw;
+            font-family: "Visby Regular";
+            letter-spacing: 0.1vw;
+        }
+
+        .brandowners__content {
+            margin-top: 8vw;
+        }
+    }
+}
+
+@media screen and (min-width:$mobile ) and (max-width: $tablet) {
+    .lap_particles {
+        display: none;
+    }
+
+    .mobile_particles {
+        display: none;
+    }
+
+    .tablet_particles {
+        display: block;
+    }
+}
