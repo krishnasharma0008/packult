@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { uploadImageArray } from '../../../utils/firebase_image_upload'
 import { uploadData } from '../../../utils/firebase_data_handler'
 import { queryClient } from '../../_app'
+import { ADMIN_ROUTES } from '../../../common/routes';
 
 function Index() {
     const router = useRouter()
