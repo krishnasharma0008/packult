@@ -189,32 +189,32 @@ export default function Index(){
                         />
                     </div>
                     <div className={styles.qr_codes}>
-                      <a href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
+                      <Link href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
                         <Image
                           src={"/assets/images/packarma/PACKARMA_C_QR.png"}
                           alt="Packarma For Customer-QR Code"
                           width={1000}
                           height={1000}
                         />
-                      </a>
+                      </Link>
                       <h5>Scan now to Download our App.
                         <div className={styles.apple_play_store}>
-                          <a href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
+                          <Link href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
                             <Image
                               src={"/assets/images/packarma/App Store.png"}
                               alt="App Store Icon"
                               width={1000}
                               height={1000}
                             />
-                          </a>
-                          <a href="https://play.google.com/store/apps/details?id=com.packult.customer" rel="noopener noreferrer" target="_blank">
+                          </Link>
+                          <Link href="https://play.google.com/store/apps/details?id=com.packult.customer" rel="noopener noreferrer" target="_blank">
                             <Image
                               src={"/assets/images/packarma/Google Play.png"}
                               alt="Play Store Icon"
                               width={1000}
                               height={1000}
                           />
-                         </a>
+                         </Link>
                         </div>
                       </h5>
                     </div>
@@ -312,7 +312,7 @@ export default function Index(){
                           <p>Powered By PACKult</p>
                         </h2>
                         <div className={styles.qr_codes}>
-                          <a href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
+                          <Link href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
                             <Image
                               src={"/assets/images/packarma/PACKARMA_C_QR.png"}
                               alt="Packarma For Customer-QR Code"
@@ -320,10 +320,10 @@ export default function Index(){
                               height={1000}
                               //style={{paddingRight:"0.6vw"}}
                             />
-                          </a>
+                          </Link>
                           <h5>Scan now to Download our App.
                             <div className={styles.apple_play_store}>
-                              <a href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
+                              <Link href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
                                 <Image
                                   src={"/assets/images/packarma/App Store.png"}
                                   alt="App Store Icon"
@@ -331,15 +331,15 @@ export default function Index(){
                                   height={1000}
                                   //style={{position:"absolute",left:"22vw"}}
                                 />
-                              </a>
-                              <a href="https://play.google.com/store/apps/details?id=com.packult.customer" rel="noopener noreferrer" target="_blank">
+                              </Link>
+                              <Link href="https://play.google.com/store/apps/details?id=com.packult.customer" rel="noopener noreferrer" target="_blank">
                                 <Image
                                   src={"/assets/images/packarma/Google Play.png"}
                                   alt="Play Store Icon"
                                   width={1000}
                                   height={1000}
                                 />
-                              </a>
+                              </Link>
                             </div>
                             </h5>
                       </div>
@@ -467,18 +467,22 @@ export default function Index(){
                         Packarma is available both on Playstore & iOS.
                       </p>    
                       <div className={styles.apple_play_store}>
-                        <Image
-                          src={"/assets/images/home/App Store.png"}
-                          alt="App Store Icon"
-                          width={1000}
-                          height={1000}
-                        />
-                        <Image
-                          src={"/assets/images/home/Google Play.png"}
-                          alt="Play Store Icon"
-                          width={1000}
-                          height={1000}
-                        />
+                      <Link href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
+                          <Image
+                            src={"/assets/images/home/App Store.png"}
+                            alt="App Store Icon"
+                            width={1000}
+                            height={1000}
+                          />
+                        </Link>
+                        <Link href="https://play.google.com/store/apps/details?id=com.packult.customer" rel="noopener noreferrer" target="_blank">
+                          <Image
+                            src={"/assets/images/home/Google Play.png"}
+                            alt="Play Store Icon"
+                            width={1000}
+                            height={1000}
+                          />
+                        </Link>
                       </div>                                       
                     </div>  
                 </div>
