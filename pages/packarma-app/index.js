@@ -238,7 +238,7 @@ export default function Index(){
                         {" "}
                       </span>
                     </h3>
-                    <div style={{  width:"80vw",height: "35vw",top:"1vw",marginRight:"10vw"}}>
+                    <div style={{  width:"80vw",height: "35vw",top:"1vw"}}>
                       <Carousel
                         defaultControlsConfig={{
                           nextButtonText: ">",
@@ -547,7 +547,7 @@ export default function Index(){
                   <div className={styles.content}>
                     <Image
                       data-aos="fade-left"
-                      src="/assets/images/about/about (1).png"
+                      src="/assets/images/packarma/about_us.png"
                       width={1000}
                       height={1000}
                       alt="Innovative Packaging"
