@@ -58,7 +58,7 @@
         // background-size: contain; 
 
         .details {
-          padding: 4vw 4vw;
+          padding: 4vw 4vw 0vw 4vw;
 
           // img {            
           //   width: 7.38vw;
@@ -69,9 +69,9 @@
             //margin-top: 1vw;
             margin: 0%;           
             color: #FFF;
-            font-family: 'Open Sans' ;
+            font-family: 'Visby Bold' ;
             font-size: 4.23vw;
-            font-style: italic;
+            //font-style: italic;
             font-weight: 300;
             line-height: 5.29vw; /* 109.375% */
             letter-spacing: 0.02em;
@@ -90,7 +90,7 @@
           }
 
           p {
-            margin-top: 0vw;
+            margin-top: 0.5vw;
             font-family: 'Visby Regular';
             font-size: 1.46vw;
             font-style: normal;
@@ -102,15 +102,19 @@
           .qr_codes {
             margin-top: 8vw;
             display: flex;             
-            gap: 2vw;
+            //gap: 2vw;
 
             img {
               width: 5.76vw;
               height: 5.82vw;
               flex-shrink: 0;
+              //padding-right:0.6vw;
+              border-radius: 0.4vw;
+              border-width: 1vw;
             }
 
             h5 {
+              padding-left:0.6vw;
               flex-direction: column;
               margin: 0;
               width: 24vw;
@@ -128,7 +132,7 @@
                 display: flex;              
                 gap: 0.5vw;
                 justify-content: start;
-                margin-top: 1vw;
+                margin-top: 0.7vw;
   
                 img {
                     width: 8vw;
@@ -320,7 +324,8 @@
       //gap:3vw;            
 
         ul {
-          margin: 0;          
+          margin: 0;     
+          vertical-align: top;
 
           li {           
               list-style-type: none; /* Remove default list-style */
@@ -358,14 +363,14 @@
           }   
 
           li:nth-child(1)::before {
-            top: 7%;
-            background-image: url('/assets/images/packarma/categrasied.png');
-          }
-        
-          li:nth-child(2)::before {
             top: 12%;
-            background-image: url('/assets/images/packarma/subcription.png');
-          }       
+            background-image: url('/assets/images/packarma/banner_adv.png');
+          }   
+
+          li:nth-child(2)::before {
+            top: 10%;
+            background-image: url('/assets/images/packarma/subcription.png');            
+          } 
         }
       }
       
@@ -373,7 +378,7 @@
     }
   
   .middle {
-    width: 40%;
+    width: 35%;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -387,7 +392,7 @@
         }
     }
     .right {
-      width: 30%;
+      width: 35%;
       
       .content {
         display: flex;
@@ -431,16 +436,17 @@
               //background-image: url('/assets/images/packarma/banner_adv.png');
               background-repeat: no-repeat;
               background-size: contain;
-            }    
+            } 
             li:nth-child(1)::before {
+              top: 12%;
+              background-image: url('/assets/images/packarma/categrasied.png');
+            }     
+            li:nth-child(2)::before {
               top: 8%;
               background-image: url('/assets/images/packarma/search_hist.png');
             }
           
-            li:nth-child(2)::before {
-              top: 12%;
-              background-image: url('/assets/images/packarma/banner_adv.png');
-            }       
+                
           }
         }
     }
@@ -723,7 +729,7 @@
               background-color: rgba(255, 255, 255, 0.400);
               border: none;
               align-self: center;
-              margin-bottom: 3vw;
+              //margin-bottom: 3vw;
           }
 
           p {
@@ -758,10 +764,11 @@
               padding: 0 3vw;
               justify-content: center;
               align-items: center;
+              text-align: justify;
               height: 25vw;
               margin-left: 10vw;
               margin-right: 10vw;
-              margin-bottom: 3vw;
+              //margin-bottom: 3vw;
           }
       }
   }

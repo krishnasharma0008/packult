@@ -189,7 +189,7 @@ export default function Index(){
                         />
                     </div>
                     <div className={styles.qr_codes}>
-                      <a href="https://www.qrcodechimp.com/page/rq4f2808n4xz">
+                      <a href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
                         <Image
                           src={"/assets/images/packarma/PACKARMA_C_QR.png"}
                           alt="Packarma For Customer-QR Code"
@@ -199,7 +199,7 @@ export default function Index(){
                       </a>
                       <h5>Scan now to Download our App.
                         <div className={styles.apple_play_store}>
-                          <a href="https://apps.apple.com/in/app/packarma/id1666282108">
+                          <a href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
                             <Image
                               src={"/assets/images/packarma/App Store.png"}
                               alt="App Store Icon"
@@ -207,7 +207,7 @@ export default function Index(){
                               height={1000}
                             />
                           </a>
-                          <a href="https://play.google.com/store/apps/details?id=com.packult.customer">
+                          <a href="https://play.google.com/store/apps/details?id=com.packult.customer" rel="noopener noreferrer" target="_blank">
                             <Image
                               src={"/assets/images/packarma/Google Play.png"}
                               alt="Play Store Icon"
@@ -307,31 +307,23 @@ export default function Index(){
                   <div className={styles.content}>                      
                   <div className={styles.left}>
                     <div className={styles.ellipse} >
-                      <div className={styles.details}>
-                        {/* <Image
-                          src="/assets/images/packarma/logo.png"
-                          alt="hero banner"
-                          height={1000}
-                          width={1000}
-                          Packarma
-                          UnwrAPP Efficiency,
-                          Simplify Packaging!
-                        /> */}
-                        <h2 style={{marginTop:"2vw"}}><span>Packarma</span> <br /> Unwr<span>App</span> Efficiency, <br /> Simplify Packaging!
+                      <div className={styles.details}>                       
+                        <h2><span>Packarma</span> <br /> Unwr<span>App</span> Efficiency, <br /> Simplify Packaging!
                           <p>Powered By PACKult</p>
                         </h2>
                         <div className={styles.qr_codes}>
-                          <a href="https://www.qrcodechimp.com/page/rq4f2808n4xz">
+                          <a href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
                             <Image
                               src={"/assets/images/packarma/PACKARMA_C_QR.png"}
                               alt="Packarma For Customer-QR Code"
                               width={1000}
                               height={1000}
+                              //style={{paddingRight:"0.6vw"}}
                             />
                           </a>
                           <h5>Scan now to Download our App.
                             <div className={styles.apple_play_store}>
-                              <a href="https://apps.apple.com/in/app/packarma/id1666282108">
+                              <a href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
                                 <Image
                                   src={"/assets/images/packarma/App Store.png"}
                                   alt="App Store Icon"
@@ -340,7 +332,7 @@ export default function Index(){
                                   //style={{position:"absolute",left:"22vw"}}
                                 />
                               </a>
-                              <a href="https://play.google.com/store/apps/details?id=com.packult.customer">
+                              <a href="https://play.google.com/store/apps/details?id=com.packult.customer" rel="noopener noreferrer" target="_blank">
                                 <Image
                                   src={"/assets/images/packarma/Google Play.png"}
                                   alt="Play Store Icon"
@@ -447,7 +439,7 @@ export default function Index(){
             )}
               
               <div className={styles.benifits}>
-                <Heading heading="Benefit" line={true} />
+                <Heading heading="Benefits" line={true} />
                 {/* <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>  */}
                 {/* <h3>Download app for unmatched convenience!</h3> */}
                 <div className={styles.content}>                   
@@ -497,19 +489,19 @@ export default function Index(){
                 <div className={styles.component}>
                     <div className={styles.left}>
                       <div className={styles.content}> 
-                      <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",left:"-11.1vw",top:"22.8vw"}}></div>
-                      <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",left:"-11.1vw",top:"3.8vw"}}></div>
+                      <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",left:"-11.1vw",top:"20.9vw"}}></div>
+                      <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",left:"-11.1vw",top:"4vw"}}></div>
                       {/* <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",left:"-11.1vw",top:"8.8vw"}}></div> */}
                         <ul data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">                            
                           <li>
-                            <h3> Categorized data</h3>
-                            The app features solutions categorized into Food, Home & Personal Care and Pharmaceuticals, with regular updates to expand and enhance its offerings.
-                            Many more Product categories would be added in the coming months.
-                          </li>
+                            <h3> Banner Advertisement</h3>
+                            The app will actively promote Packaging Converters & their services, serving as a robust platform for lead generation within the industry.
+                            <br /><br /><br />
+                          </li>                          
                         {/* </ul>
                         <ul data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">                             */}
                           <li>
-                            <h3> Subscription based model</h3>
+                            <h3> Subscription Based Model</h3>
                             Users can access the full range of packaging solutions through a subscription model offered by the app.
                           </li>
                         </ul>                        
@@ -525,9 +517,14 @@ export default function Index(){
                       </div>
                       <div className={styles.right}>
                         <div className={styles.content}>   
-                          <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",right:"11vw",top:"21.5vw"}}></div>
-                          <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",right:"11vw",top:"3.7vw"}}></div>                                            
+                          <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",right:"13vw",top:"19.6vw"}}></div>
+                          <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",right:"13vw",top:"4.3vw"}}></div>                                            
                           <ul data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">                            
+                            <li>
+                              <h3> Categorized Data</h3>
+                              The app features solutions categorized into Food, Home & Personal Care and Pharmaceuticals, with regular updates to expand and enhance its offerings.
+                              Many more Product categories would be added in the coming months.
+                            </li>
                             <li>
                               <h3> Search History</h3>
                               The app&apos;s history tab stores previously searched solutions, providing easy access to your search history.
@@ -535,10 +532,7 @@ export default function Index(){
                             </li>
                           {/* </ul>
                           <ul data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">                             */}
-                            <li>
-                              <h3> Banner Advertisement</h3>
-                              The app will actively promote Packaging Converters & their services, serving as a robust platform for lead generation within the industry.
-                            </li>
+                            
                           </ul>
                         </div> 
                       </div>                      
