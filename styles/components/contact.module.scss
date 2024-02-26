@@ -118,6 +118,22 @@
             height: 20vw;
             margin-left: 5vw;
         }
+        // .social {
+           
+            
+            .icons {
+                // display: grid;
+                // grid-auto-flow: column;
+                // grid-gap: 2vw;
+                // grid-column-gap: 2vw;
+                // text-align: right;
+        
+                img {
+                width: 2vw;
+                height: max-content;
+                }
+            }
+        //}
     }
 }
 
@@ -168,6 +184,7 @@
                 width: max-content;
                 margin-left: 0vw;
             }
+            
         }
 
 

@@ -551,7 +551,7 @@
         .content {
             display: flex;
             align-items: center;
-            gap: 10vw;
+            gap: 5vw;
             margin-bottom: 4vw;
             margin-top: 2vw;
 
@@ -561,6 +561,7 @@
                 font-weight: 300;
                 //font-style: italic;
                 line-height: 2.24vw;
+                text-align: justify;
             }
             
 
@@ -586,7 +587,7 @@
             }
 
             img {
-                width: 30vw;
+                width: 40vw;
                 height: max-content;
                 margin: 0;
             }

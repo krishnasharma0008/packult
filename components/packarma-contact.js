@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRef, useState } from "react";
 import styles from "../styles/components/contact.module.scss";
 import Image from "next/image";
@@ -110,14 +111,45 @@ export default function PackarmaContact() {
             </button >
           </form>
         </div>
-        <Image
-          data-aos="fade-up"
-          data-aos-offset="-500"
-          src="/assets/images/components/contactPerson.svg"
-          height={100}
-          width={100}
-          alt={"Contact Packult"}
-        />
+        <div>
+          <Image
+            data-aos="fade-up"
+            data-aos-offset="-500"
+            src="/assets/images/components/contactPerson.svg"
+            height={100}
+            width={100}
+            alt={"Contact Packult"}
+          />
+        {/* Move the social icons here, right below the Image component */}
+        <div className={styles.icons}>
+          <Link href="https://www.facebook.com/sustainovation">
+              <Image
+                src="/assets/icons/facebook.svg"
+                width={30}
+                height={30}
+                alt="Facebook Icon"
+              />
+          </Link>
+          <Link href="https://www.instagram.com/packult2021/">
+              <Image
+                src="/assets/icons/instagram.svg"
+                width={30}
+                height={30}
+                alt="Instagram Icon"
+              />
+          </Link>
+          <Link href="https://www.linkedin.com/company/packult-studio-private-limited">
+              <Image
+                src="/assets/icons/linkedin.svg"
+                width={30}
+                height={30}
+                alt="Linkedin Icon"
+              />
+          </Link>
+        </div>
+        </div>
+
+
       </div>
     </div>
   );
