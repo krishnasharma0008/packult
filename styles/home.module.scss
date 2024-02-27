@@ -726,7 +726,8 @@
     background-color: #EFFEA6;
     padding: 0 2vw;
     margin: 0 10vw;
-    margin-bottom: 5vw;
+    //margin-bottom: 5vw;
+    margin-top: 10vw;
     border-radius: 1vw;
 
     .contentHeader{
@@ -803,8 +804,9 @@
                     display: flex;
                     gap: 2vw;
                     justify-content: center;
-                    margin-top: 5vw;
-    
+                    //margin-top: 5vw;
+                    
+                    
                     img {
                         width: 8vw;
                         cursor: pointer;

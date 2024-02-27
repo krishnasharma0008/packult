@@ -5,7 +5,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+//import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 export const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
@@ -113,7 +113,7 @@ function MyApp({ Component, pageProps }) {
       </div>
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />
-        <ReactQueryDevtools initialIsOpen={false} />
+        {/* <ReactQueryDevtools initialIsOpen={false} /> Flower Icon That displays in the footer*/}
       </QueryClientProvider>
     </>
   );

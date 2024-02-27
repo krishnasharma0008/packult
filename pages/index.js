@@ -1076,7 +1076,7 @@ export default function Home() {
                 height={1000}
               />
               <div className={styles.apple_play_store}>
-              <Link href="https://apps.apple.com/in/app/packarma/id1666282108">
+                <Link href="https://apps.apple.com/in/app/packarma/id1666282108" target="_blank">
                   <Image
                     src={"/assets/images/home/App Store.png"}
                     alt="App Store Icon"
@@ -1084,7 +1084,7 @@ export default function Home() {
                     height={1000}
                   />
                 </Link>
-                <Link href="https://play.google.com/store/apps/details?id=com.packult.customer">
+                <Link href="https://play.google.com/store/apps/details?id=com.packult.customer" target="_blank">
                   <Image
                     src={"/assets/images/home/Google Play.png"}
                     alt="Play Store Icon"
@@ -1097,7 +1097,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <WorkNumbers />
+      <WorkNumbers/>
       <Contact />
     </Layout>
   );

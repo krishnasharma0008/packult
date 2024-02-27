@@ -57,7 +57,7 @@ export default function Footer() {
             <Link
               data-aos="fade-up"
               data-aos-offset="-700"
-              href="https://www.instagram.com/packult2021/"
+              href="https://www.instagram.com/packultstudio/"
             >
               <Image
                 src="/assets/icons/instagram.svg"
@@ -69,7 +69,7 @@ export default function Footer() {
             <Link
               data-aos="fade-up"
               data-aos-offset="-700"
-              href="https://www.linkedin.com/company/packult-studio-private-limited"
+              href="https://www.linkedin.com/showcase/101407321/admin/feed/posts/"
             >
               <Image
                 src="/assets/icons/linkedin.svg"
@@ -110,14 +110,14 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p
+      {/* <p
         className={styles.madeBy}
         onClick={() => {
           router.push("https://digilligence.in");
         }}
       >
-        {/* Designed & Developed by Digilligence */}
-      </p>
+        Designed & Developed by Digilligence
+      </p> */}
     </div>
   );
 }

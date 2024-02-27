@@ -549,13 +549,41 @@ export default function Index(){
               <div className={styles.aboutus}>                           
                 <div className={styles.component}>
                   <div className={styles.content}>
-                    <Image
-                      data-aos="fade-left"
-                      src="/assets/images/packarma/about_us.png"
+                    {/* <Image
+                      //data-aos="fade-left"
+                      src="/assets/images/about/about (5).png"
                       width={1000}
                       height={1000}
                       alt="Innovative Packaging"
-                    />
+                    /> */}
+                    <div className={styles.LinkedinImage}>
+                      <div className={styles.LinkedinImage}>
+                        <Image
+                          src={"/assets/images/about/about (5).png"}
+                          alt="Manish Mehta-Packaging Expert in India"
+                          width={1000}
+                          height={1000}
+                        />
+                        <div className={styles.NameLink}>
+                          <h3>Manish Mehta</h3>
+                          <Link
+                            href={
+                              "https://www.linkedin.com/in/manish-mehta-886b557/?originalSubdomain=in"
+                            }
+                          >
+                            Linkedin{" "}
+                            <span>
+                              <Image
+                                src={"/assets/images/about/about (9).png"}
+                                width={1000}
+                                height={1000}
+                                alt="Blue Arrow Icon"
+                              />
+                            </span>{" "}
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                     <div>                     
                       <p>
                         Introducing Packarma, an innovative app-based platform that provides customised Flexible packaging solutions for several product categories, with other Packaging formats and several other features in the pipeline. Whether you need packaging solutions for Food, Home and Personal Care  or Pharma products, Packarma helps you find the best solutions for your needs. From the exacting requirements of the food industry to the precise demands of home & personal care and pharmaceuticals, Packarma offers best-in-class solutions tailored to your specific needs. Packarma works on a subscription basis and offers the convenience of finding the most reliable packaging solutions on the go.
@@ -584,7 +612,7 @@ export default function Index(){
                       alt="Rating Icon"
                       height={1000}
                       width={1000}
-                      style={{ marginBottom: "2vw   " }}
+                      style={{ marginBottom: "1vw" }}
                     />
                     <hr />
 

@@ -79,7 +79,7 @@
   
             span {
               color: #C2D950;
-              font-family: 'Visby';
+              font-family: 'Visby Bold';
               font-size: 4.23vw;
               font-style: normal;
               font-weight: 500;
@@ -576,7 +576,7 @@
                     height: max-content;
                     transition: all 0.5s ease-in-out;
 
-                }
+                }                
 
                 &:hover {
                     img {
@@ -586,111 +586,88 @@
                 }
             }
 
-            img {
-                width: 40vw;
-                height: max-content;
-                margin: 0;
-            }
+            // img {
+            //     width: 40vw;
+            //     height: max-content;
+            //     margin: 0;
+            // }
 
-            ul {
-                cursor: pointer;
-
-                li {
-                    font-size: 1.5vw;
-                    color: $dark;
-                    font-family: 'Visby Bold';
-                    text-decoration: underline;
-                    line-height: 3vw;
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover {
-                        color: $primary;
-                        transition: all 0.3s ease-in-out;
-                    }
-                }
-
-            }
-
-            .all_services {
-                background-color: #87BE42;
-            }
-        }
-
-        .all_services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2vw;
-
-            margin: 5vw 0;
-
-            a {
+            
+            .LinkedinImage {
+              position: relative;
+              width: 25vw;
+              border-radius: 2vw;
+              height: max-content;
+              box-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.2);
+      
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 2vw;
+              }
+      
+              // even childern
+              &:nth-child(even) {
+                margin-top: 10vw;
+                border-radius: 2vw;
+              }
+      
+              .NameLink {
+                position: absolute;
+                border-radius: 2vw;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
                 display: flex;
-                justify-content: center;
-                border-radius: 1vw;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-
-                h2 {
-                    font-size: 1.5vw;
-                    font-family: 'Visby Bold';
-
+                flex-direction: column;
+                justify-content: end;
+                align-items: center;
+                font-size: 1.5vw;
+                // gradient background
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 0, 0, 0) 0,
+                  rgba(0, 0, 0, 0) 60%,
+                  rgba(255, 255, 255, 0.4) 75%,
+                  rgba(129, 129, 129, 0.5) 85%,
+                  rgb(0, 0, 0) 100%
+                );
+      
+                h3 {
+                  font-size: 2.5vw;
+                  margin: 0;
+                  color: $light;
+                  font-family: "Visby SemiBold";
+                  position: absolute;
+                  bottom: 5vw;
+                }
+      
+                a {
+                  display: flex;
+                  font-size: 2vw;
+                  margin: 0;
+                  color: rgb(24, 119, 242);
+                  text-decoration: underline;
+                  position: absolute;
+                  bottom: 2vw;
+                  font-family: "Visby Medium Italic";
+      
+                  span {
+                    width: 1.5vw;
+                    height: max-content;
+                    margin-left: 1vw;
+      
                     img {
-                        margin: 0 1vw;
-                        width: 2vw;
-                        height: max-content;
-                        transition: all 0.3s ease-in-out;
-
+                      border-radius: 0;
+                      width: 100%;
+                      height: 100%;
                     }
+                  }
                 }
-
-                &:hover {
-                    box-shadow: 0px 4px 8px $primary;
-
-                    img {
-                        transform: scale(0.5) rotateZ(-135deg) translateY(-1vw);
-                        transition: all 0.3s ease-in-out;
-
-
-                    }
-                }
-            }
-        }
-
-        .all_services_button {
-            display: flex;
-            margin: 5vw 0;
-
-
-            hr {
-                width: 30%;
-                height: 0.1vw;
-                background-color: rgba(0, 0, 0, 0.400);
-                border: none;
-                align-self: center
-            }
-
-            a {
-                background-color: $primary;
-                color: $light;
-                font-size: $button;
-                font-family: 'Visby Bold';
-                padding: 1vw 2vw;
-                border-radius: 2.5vw;
-                // drop shadow
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-
-                &:hover {
-
-                    background-color: $light;
-                    color: $primary;
-                    box-shadow: 0px 4px 8px $primary;
-                    transition: all 0.5s ease-in-out;
-
-                }
-
-            }
-
-
-        }
+              }
+            }           
+        }        
     }
 }
 
@@ -720,8 +697,8 @@
           h2 {
               font-size: 2vw;
               font-family: 'Visby Regular';
-              margin-bottom: 3vw;
-              line-height: 3vw;
+              //margin-bottom: 2vw;
+              line-height: 2vw;
           }
 
           hr {
@@ -735,7 +712,7 @@
 
           p {
               font-size: 1.1vw;
-              font-family: 'Visby Thin';
+              font-family: 'Visby Regular';
               line-height: 2.5vw;
               letter-spacing: .2vw;
 
@@ -766,9 +743,9 @@
               justify-content: center;
               align-items: center;
               text-align: justify;
-              height: 25vw;
-              margin-left: 10vw;
-              margin-right: 10vw;
+              height: 18vw;
+              margin-left: 5vw;
+              margin-right: 5vw;
               //margin-bottom: 3vw;
           }
       }

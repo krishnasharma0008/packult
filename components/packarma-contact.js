@@ -122,7 +122,7 @@ export default function PackarmaContact() {
           />
         {/* Move the social icons here, right below the Image component */}
         <div className={styles.icons}>
-          <Link href="https://www.facebook.com/sustainovation">
+          {/* <Link href="https://www.facebook.com/sustainovation">
               <Image
                 src="/assets/icons/facebook.svg"
                 width={30}
@@ -137,8 +137,8 @@ export default function PackarmaContact() {
                 height={30}
                 alt="Instagram Icon"
               />
-          </Link>
-          <Link href="https://www.linkedin.com/company/packult-studio-private-limited">
+          </Link> */}
+          <Link href="https://www.linkedin.com/showcase/101407321/admin/feed/posts/">
               <Image
                 src="/assets/icons/linkedin.svg"
                 width={30}
