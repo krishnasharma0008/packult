@@ -569,7 +569,7 @@ export default function Index(){
                           <Link
                             href={
                               "https://www.linkedin.com/in/manish-mehta-886b557/?originalSubdomain=in"
-                            }
+                            }  target="_blank"
                           >
                             Linkedin{" "}
                             <span>
