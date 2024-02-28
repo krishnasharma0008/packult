@@ -8,7 +8,7 @@ import Layout from "../../components/layout"
 //import BlogCarousel from "../../components/blogCarousel"
 import PackarmaBlogCarousel from "../../components/packarmaBlogCarousel"
 import WorkNumbers from "../../components/workNumbers"
-import Contact from "../../components/contact"
+import PackarmaContact from "../../components/packarma-contact"
 import { getDataById } from "../../utils/firebase_data_handler"
 import { useQuery } from "@tanstack/react-query"
 
@@ -42,7 +42,8 @@ function Index() {
             </div>
             <PackarmaBlogCarousel heading={"Related Articles For you"} isBlogPage={true} />
             <WorkNumbers />
-            <Contact />
+            <PackarmaContact />
+            {/* <Contact /> */}
         </Layout>
     )
 }
