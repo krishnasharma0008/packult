@@ -333,7 +333,7 @@
               margin-bottom: 2vw;
               font-size: 1.32vw;
               font-weight: 400;
-              font-family: 'Visby Medium';
+              font-family: 'Visby Regular';
               position: relative;
               color: #0F001A;
               line-height: 1.59vw;
@@ -409,7 +409,7 @@
               margin-bottom: 2vw;
               font-size: 1.32vw;
               font-weight: 400;
-              font-family: 'Visby Medium';
+              font-family: 'Visby Regular';
               position: relative;
               color: #0F001A;
               line-height: 1.59vw;
@@ -585,14 +585,7 @@
                     }
                 }
             }
-
-            // img {
-            //     width: 40vw;
-            //     height: max-content;
-            //     margin: 0;
-            // }
-
-            
+           
             .LinkedinImage {
               position: relative;
               width: 25vw;
@@ -974,5 +967,423 @@
       }
     }
   }
+
+  .features {
+    padding: 0 10vw;
+    //margin-top: 5vw;
+    
+    .component{
+      display: flex;
+      align-items: center;
+      margin-bottom: 5vw;
+    
+  
+    .left {
+      width: 35%;
+      
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        //vertical-align: text-top;
+        //gap:3vw;            
+  
+          ul {
+            margin: 0;     
+            vertical-align: top;            
+  
+            li {           
+                list-style-type: none; 
+                font-size: $mobile_text;
+                font-family: 'Visby Regular';
+                line-height: 3.2vw;
+                letter-spacing: .1vw;
+                text-align: justify;
+            }
+  
+            li h3 {
+              font-size: 2vw;
+              font-family: 'Visby Bold';
+              //text-align: left;
+            }
+  
+            li::before {
+              content: '';
+              position: absolute;
+              left: 0; /* Adjust if you need */
+              /* Center vertically */
+              transform: translateY(-50%); /* Adjust to perfectly center if needed */
+              width: 2vw;
+              height: 2vw;
+              //background-image: url('/assets/images/packarma/benefiticon.png');
+              background-repeat: no-repeat;
+              background-size: contain;
+            }   
+  
+            li:nth-child(1)::before {
+              top: 4%;
+              background-image: url('/assets/images/packarma/banner_adv.png');
+            }   
+  
+            li:nth-child(2)::before {
+              top: 4%;
+              background-image: url('/assets/images/packarma/subcription.png');            
+            } 
+          }
+        }
+        
+        
+      }
+    
+    .middle {
+      width: 25%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+  
+      img {
+              height: max-content;
+              width: 14.5vw;
+              margin: 0;
+              border-radius: 1vw;
+              // background-color: #87BE42;
+          }
+      }
+      .right {
+        width: 40%;
+        
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;   
+          //gap:3vw;            
+    
+            ul {
+              margin: 0;          
+    
+              li {           
+                list-style-type: none; /* Remove default list-style */
+                font-size: $mobile_text;
+                font-family: 'Visby Regular';
+                line-height: 2.5vw;
+                letter-spacing: .1vw;
+                text-align: justify;
+            }
+  
+            li h3 {
+              font-family: 'Visby Bold';
+              font-size: 2vw;
+            }
+    
+              li::before {
+                content: '';
+                position: absolute;
+                left: 0; /* Adjust if you need */
+                //top: 13%; /* Center vertically */
+                transform: translateY(-50%); /* Adjust to perfectly center if needed */
+                width: 2vw;
+                height: 2vw;
+                //background-image: url('/assets/images/packarma/banner_adv.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+              } 
+              li:nth-child(1)::before {
+                top: 4%;
+                background-image: url('/assets/images/packarma/categrasied.png');
+              }     
+              li:nth-child(2)::before {
+                top: 4%;
+                background-image: url('/assets/images/packarma/search_hist.png');
+              }
+            
+                  
+            }
+          }
+      }
+    }
+  }
+  
+  .benifits {
+    padding: 0 10vw;
+    margin-top: 5vw;
+  
+    h3 {
+      font-size: 3.5vw;
+      //font-weight: 300;
+      font-family: 'Visby SemiBold';
+      //font-style: italic;
+      //list-style: 1.83vw;
+      // line-height: 2.52vw;
+      // margin-bottom: 0vw;
+    }
+  
+    .content {
+              display: flex;
+              //flex-direction: column;
+              padding: 2vw 0;    
+  
+      .left {
+        width: 50%;
+        margin-top: 5vw;
+  
+        .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+  
+        img {
+          width: max-content;
+          height: 22vw;
+          margin: auto;
+          display: block;
+        }
+        .apple_play_store {
+          display: flex;
+          justify-content: center;
+          gap: 1vw;
+          margin-top: 5vw;
+          //justify-content: center;
+  
+          img {
+              width: 12vw;
+              cursor: pointer;
+              height: max-content;
+          }
+        }
+      }
+  
+      .right {
+        width: 50%;
+  
+        h2 {
+          font-size: 2.8vw;
+          font-family: 'Visby SemiBold';
+        }
+  
+        p {
+            font-size: $mobile_text;
+            font-family: 'Visby Regular';
+            line-height: 2.5vw;
+            letter-spacing: .1vw;
+        }
+  
+        
+      }
+    }
+  }
+
+  .aboutusHead {
+    padding: 0 10vw;
+    //margin-top: 5vw;
+  }
+
+  .aboutus {
+    padding: 0 10vw;
+    //margin-top: 5vw;
+    background-color: #F8FFD7;
+
+    .component {
+        &:nth-child(odd) {
+            .content {
+                flex-direction: row-reverse;
+
+                h2 {
+                    color: $primary;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 5vw;
+            margin-bottom: 4vw;
+            margin-top: 2vw;
+
+            p {
+                font-size: $mobile_text;
+                font-family: 'Visby Regular';
+                //font-weight: 300;
+                //font-style: italic;
+                //line-height: 2.24vw;
+                text-align: justify;
+            }
+            
+
+            h2 {
+                font-size: 2.5vw;
+                font-family: 'Visby Bold';
+                cursor: pointer;
+
+                img {
+                    margin: 0 1vw;
+                    width: 1.5vw;
+                    height: max-content;
+                    transition: all 0.5s ease-in-out;
+
+                }                
+
+                &:hover {
+                    img {
+                        transform: rotate(-135deg) scale(1.2);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+           
+            .LinkedinImage {
+              position: relative;
+              width: 25vw;
+              border-radius: 2vw;
+              height: max-content;
+              box-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.2);
+      
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 2vw;
+              }
+      
+              // even childern
+              &:nth-child(even) {
+                margin-top: 10vw;
+                border-radius: 2vw;
+              }
+      
+              .NameLink {
+                position: absolute;
+                border-radius: 2vw;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: center;
+                font-size: 1.5vw;
+                // gradient background
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 0, 0, 0) 0,
+                  rgba(0, 0, 0, 0) 60%,
+                  rgba(255, 255, 255, 0.4) 75%,
+                  rgba(129, 129, 129, 0.5) 85%,
+                  rgb(0, 0, 0) 100%
+                );
+      
+                h3 {
+                  font-size: 2.5vw;
+                  margin: 0;
+                  color: $light;
+                  font-family: "Visby SemiBold";
+                  position: absolute;
+                  bottom: 5vw;
+                }
+      
+                a {
+                  display: flex;
+                  font-size: 2vw;
+                  margin: 0;
+                  color: rgb(24, 119, 242);
+                  text-decoration: underline;
+                  position: absolute;
+                  bottom: 2vw;
+                  font-family: "Visby Medium Italic";
+      
+                  span {
+                    width: 1.5vw;
+                    height: max-content;
+                    margin-left: 1vw;
+      
+                    img {
+                      border-radius: 0;
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                }
+              }
+            }           
+        }        
+    }
+}
+
+
+.customers {
+  background-color: $dark;
+  color: $light;
+  padding: 0 10vw;
+
+  .content {
+      display: flex;
+      flex-direction: column;
+      gap: 5vw;
+      justify-content: center;
+      align-items: center;
+
+      .left {
+          width: 100%;
+          text-align: center;
+
+          h2 {
+              font-size: 2vw;
+              font-family: 'Visby Regular';
+              //margin-bottom: 2vw;
+              line-height: 2vw;
+          }
+
+          hr {
+              width: 100%;
+              height: 0.1vw;
+              background-color: rgba(255, 255, 255, 0.400);
+              border: none;
+              align-self: center;
+              //margin-bottom: 3vw;
+          }
+
+          p {
+              font-size: $mobile_text;
+              font-family: 'Visby Regular';
+              line-height: 2.5vw;
+              letter-spacing: .2vw;
+
+          }
+
+          h4 {
+              font-size: 2.6vw;
+              font-family: 'Visby Thin';
+              line-height: 2.5vw;
+              letter-spacing: .2vw;
+
+              span {
+                  font-size: 1.5vw;
+                  font-family: 'Visby Bold';
+                  margin-right: 2vw;
+              }
+          }
+
+          img {
+              width: 15vw;
+              height: max-content;
+          }
+
+          .carousel {
+              display: flex;
+              flex-direction: column;
+              padding: 0 3vw;
+              justify-content: center;
+              align-items: center;
+              text-align: justify;
+              height: 37vw;
+              margin-left: 5vw;
+              margin-right: 5vw;
+          }
+      }
+  }
+
+}
 
 }

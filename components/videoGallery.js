@@ -59,7 +59,7 @@ const VideoGallery = () => {
           <div className="thumbnail-container">
             {videoArray.slice(visibleVideos - 3, visibleVideos).map((video, index) => (
               <div key={index} className="video-item">
-                <iframe src={video.url} alt={`Thumbnail ${video.name}`} width={100} height={100} frameBorder="0" allowFullScreen
+                <iframe src={video.url} alt={`Thumbnail ${video.name}`} style={{width:"100%",height:"97.5%"}} frameBorder="0" allowFullScreen
                  onClick={() => handleThumbnailClick(index + visibleVideos - 3)}></iframe>
               </div>
             ))}
@@ -105,16 +105,16 @@ const VideoGallery = () => {
             }}
           >
             {videoArray.map((video, index) => (
-              <div key={index} style={{ paddingLeft: "8vw",paddingRight:"6vw"}}>
+              <div key={index} style={{ paddingLeft: "8vw",paddingRight:"2vw"}}>
                 <iframe
-                  src={video.url}
-                  width="50vw"
-                  height="50vw"
-                  frameBorder="0"
-                  allowFullScreen
-                  onClick={() => handleThumbnailClick(index)}       
-                  style={{ backgroundColor: 'black' }}         
-                />
+                src={video.url}
+                width="100%"
+                height="90vw"
+                style={{ backgroundColor: 'black', maxWidth: '100%', cursor: 'pointer' }}
+                frameBorder="0"
+                allowFullScreen
+                onClick={() => handleThumbnailClick(index)}
+              />
               </div>
             ))}
           </Carousel>
@@ -137,13 +137,15 @@ const VideoGallery = () => {
         }
         
         .video-title {
-          font-size: 1.5rem; /* Example size, adjust based on your design */
+          font-family: 'Visby Bold';
+          font-size: 4vw; /* Example size, adjust based on your design */
           margin-bottom: 0.5rem;
           color: #000; /* Adjust color based on your design */
         }
         
         .video-description {
-          font-size: 1rem; /* Example size, adjust based on your design */
+          font-size: 3vw; /* Example size, adjust based on your design */
+          font-family: 'Visby Regular';
           color: #666; /* Lighter text color for the description */
         }
         
