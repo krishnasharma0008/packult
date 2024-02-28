@@ -226,7 +226,7 @@ export default function Index(){
                   <div className={styles.bgRectangle}></div>
                   <div className={styles.content}>
                     
-                    <h3 style={{color:"white",marginRight:"10vw",marginBottom:"1vw"}}>
+                    <h3 style={{color:"white",marginBottom:"1vw"}}>
                       Offers
                       <span className={styles.arrow} style={{paddingLeft:"2vw"}}>                                      
                         <Image
@@ -597,8 +597,8 @@ export default function Index(){
                 <div className={styles.bgRectangle}></div>
                 <div className={styles.content}>
                   <div className={styles.left}>                
-                  <h2>Offers
-                    <span className={styles.arrow}>
+                    <h2>Offers
+                      <span className={styles.arrow}>
                     <Image
                       src="/assets/icons/Vector.png"
                       height={17}
@@ -699,7 +699,7 @@ export default function Index(){
                         Packarma is available both on Playstore & iOS.
                       </p>    
                       <div className={styles.apple_play_store}>
-                      <Link href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
+                        <Link href="https://apps.apple.com/in/app/packarma/id1666282108" rel="noopener noreferrer" target="_blank">
                           <Image
                             src={"/assets/images/home/App Store.png"}
                             alt="App Store Icon"

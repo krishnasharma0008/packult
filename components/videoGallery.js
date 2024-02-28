@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from "@tanstack/react-query";
 import { getAllData } from "../utils/firebase_data_handler";
 import Carousel from 'nuka-carousel';
@@ -16,7 +16,7 @@ const VideoGallery = () => {
   );
 
   const videoArray = packarma_videoData.data?.data || [];
-  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);//0 for selected to the first video
   const [visibleVideos, setVisibleVideos] = useState(3);
 
   const handleThumbnailClick = (index) => {
@@ -27,7 +27,9 @@ const VideoGallery = () => {
   const selectedVideo = videoArray[selectedVideoIndex] || {};
 
   const handleScroll = (direction) => {
+    console.log(direction);
     const newIndex = direction === 'up' ? selectedVideoIndex - 1 : selectedVideoIndex + 1;
+    console.log(newIndex);
     const maxVisibleVideos = 3;
 
     if (newIndex >= 0 && newIndex < videoArray.length) {
@@ -42,71 +44,83 @@ const VideoGallery = () => {
       }
     }
   };
-  
+
+  // useEffect(() => {
+  //   // Simulate a click on the up scroll button on load
+  //   handleScroll('up');
+  // }, []);
 
   return (
-    <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
-      <div className="gallery-container">
-        <div className="video-player">
-          <iframe src={selectedVideo.url} frameBorder="0" allowFullScreen title="Main Video"></iframe>
-          <div className="video-info">
-            <h3 className="video-title">{selectedVideo.name}</h3>
-            <p className="video-description">{selectedVideo.content}</p>
+    <div style={{ marginTop: "2rem", marginBottom: "2rem", display: "flex", flexDirection: "column" }}>
+      {/* Container for Video and List (and possibly video info for larger screens) */}
+      <div className="video-and-list-container">
+        <div className="gallery-container">
+          {/* Video Player */}
+          <div className="video-player">
+            <iframe src={selectedVideo.url} frameBorder="0" allowFullScreen title="Main Video"></iframe>
+          </div>
+
+          {/* Video List - Hidden in Mobile View */}
+          <div className="video-list">
+            <button className="scroll-button" onClick={() => handleScroll('up')}>▲</button>
+            <div className="thumbnail-container">
+              {videoArray.filter((_, index) => index !== selectedVideoIndex).slice(0, visibleVideos).map((video, index) => (
+                <div key={index} className="video-item" onClick={() => handleThumbnailClick(index)}>
+                  <iframe src={video.url} frameBorder="0" allowFullScreen style={{ width: "100%", height: "97.5%" }}></iframe>
+                </div>
+              ))}
+            </div>
+            <button className="scroll-button" style={{ marginTop: "20px"}} onClick={() => handleScroll('down')}>▼</button>
           </div>
         </div>
-        <div className="video-list">
-          <button className="scroll-button" onClick={() => handleScroll('up')}>▲</button>
-          <div className="thumbnail-container">
-            {videoArray.slice(visibleVideos - 3, visibleVideos).map((video, index) => (
-              <div key={index} className="video-item">
-                <iframe src={video.url} alt={`Thumbnail ${video.name}`} style={{width:"100%",height:"97.5%"}} frameBorder="0" allowFullScreen
-                 onClick={() => handleThumbnailClick(index + visibleVideos - 3)}></iframe>
-              </div>
-            ))}
-          </div>
-          <button className="scroll-button" style={{marginTop:"20px"}} onClick={() => handleScroll('down')}>▼</button>
-        </div>
-        {/* Thumbnail Carousel for Mobile Devices */}
-        <div className='content'>
-          <Carousel
-            slidesToShow={3}
-            
-            defaultControlsConfig={{
-              nextButtonText: ">",
-              prevButtonText: "<",
-              nextButtonProps: { "aria-label": "Next" },
-              prevButtonProps: { "aria-label": "Previous" },
-              nextButtonStyle: {
-                backgroundColor: "#87BE42",
-                width: "2vw",
-                height: "2vw",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                cursor: "pointer",
-                transition: "all 0.3s ease-in-out",
-                marginRight: "-10px",
-              },
-              prevButtonStyle: {
-                backgroundColor: "#87BE42",
-                width: "2vw",
-                height: "2vw",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                cursor: "pointer",
-                transition: "all 0.3s ease-in-out",
-              },
-              pagingDotsStyle: {
-                display: "none",
-              },
-            }}
-          >
-            {videoArray.map((video, index) => (
-              <div key={index} style={{ paddingLeft: "8vw",paddingRight:"2vw"}}>
-                <iframe
+      </div>
+
+      {/* Video Information */}
+      <div className="video-info">
+        <h3 className="video-title">{selectedVideo.name}</h3>
+        <p className="video-description">{selectedVideo.content}</p>
+      </div>
+
+      {/* Thumbnail Carousel for Mobile Devices - Hidden in Desktop View */}
+      <div className='content'>
+        <Carousel
+          slidesToShow={3}
+          defaultControlsConfig={{
+            nextButtonText: ">",
+            prevButtonText: "<",
+            nextButtonProps: { "aria-label": "Next" },
+            prevButtonProps: { "aria-label": "Previous" },
+            nextButtonStyle: {
+              backgroundColor: "#87BE42",
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              cursor: "pointer",
+              transition: "all 0.3s ease-in-out",
+              marginRight: "-10px",
+            },
+            prevButtonStyle: {
+              backgroundColor: "#87BE42",
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              cursor: "pointer",
+              transition: "all 0.3s ease-in-out",
+            },
+            pagingDotsStyle: {
+              display: "none",
+            },
+          }}
+        >
+          {videoArray.map((video, index) => (
+            <div key={index} style={{ paddingLeft: "8vw", paddingRight: "2vw" }}>
+              <iframe
                 src={video.url}
                 width="100%"
                 height="90vw"
@@ -115,13 +129,17 @@ const VideoGallery = () => {
                 allowFullScreen
                 onClick={() => handleThumbnailClick(index)}
               />
-              </div>
-            ))}
-          </Carousel>
-        </div>
+            </div>
+          ))}
+        </Carousel>
       </div>
 
       <style jsx>{`
+        .video-and-list-container {
+          display: flex;
+          flex-direction: column;
+        }
+
         .gallery-container {
           display: flex;
           align-items: center;
@@ -129,25 +147,23 @@ const VideoGallery = () => {
 
         .video-player {
           flex: 1;
-          //margin-right: 20px;
+          margin-right: 40px;
         }
 
         .video-info {
-          margin-top: 10px; /* Adjust spacing as needed */
+          margin-top: 10px;
         }
-        
+
         .video-title {
-          font-size: 1.5rem; /* Example size, adjust based on your design */
+          font-size: 1.5rem;
           margin-bottom: 0.5rem;
-          color: #000; /* Adjust color based on your design */
+          color: #000;
         }
-        
+
         .video-description {
-          font-size: 1rem; /* Example size, adjust based on your design */
-          color: #666; /* Lighter text color for the description */
+          font-size: 1rem;
+          color: #666;
         }
-        
-        
 
         .video-player iframe {
           width: 784.88px;
@@ -162,16 +178,19 @@ const VideoGallery = () => {
           flex: 1;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          //align-items: center;
+          align-items: flex-start;
+          width: 140px;
         }
 
         .thumbnail-container {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          overflow-y: auto;
-          //height: 400px;
-          height:auto;
+          //align-items: center;
+          align-items: flex-start; /* Align to the left */
+          overflow-y: auto;  
+          width: 140px; /* Adjusted width */
+          height:auto;        
         }
 
         .video-item {
@@ -190,6 +209,8 @@ const VideoGallery = () => {
           border: none;
           border-radius: 50%;
           transition: background-color 0.3s ease;
+          margin: 0 auto; /* Center the button */
+          margin-left: 50px;
         }
 
         .scroll-button:hover {
@@ -220,15 +241,15 @@ const VideoGallery = () => {
 
           .video-title {
             font-family: 'Visby Bold';
-            font-size: 4vw; /* Example size, adjust based on your design */
+            font-size: 4vw;
             margin-bottom: 0.5rem;
-            color: #000; /* Adjust color based on your design */
+            color: #000;
           }
-          
+
           .video-description {
-            font-size: 3vw; /* Example size, adjust based on your design */
+            font-size: 3vw;
             font-family: 'Visby Regular';
-            color: #666; /* Lighter text color for the description */
+            color: #666;
           }
 
           .video-list {

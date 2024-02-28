@@ -138,7 +138,7 @@ export default function PackarmaContact() {
                 alt="Instagram Icon"
               />
           </Link> */}
-          <Link href="https://www.linkedin.com/showcase/101407321/admin/feed/posts/">
+          <Link href="https://www.linkedin.com/showcase/packarma/" target="_blank">
               <Image
                 src="/assets/icons/linkedin.svg"
                 width={30}

@@ -16,7 +16,7 @@
 
 .langingPage {  
   position: relative;
-  margin-top: 4.9vw;
+  margin-top: 2vw;
   //height: 40vw;
   width: 100%;
   background-image: url("/assets/images/packarma/Hero Banner.png");
@@ -90,7 +90,7 @@
           }
 
           p {
-            margin-top: 0.5vw;
+            //margin-top: 0.5vw;
             font-family: 'Visby Regular';
             font-size: 1.46vw;
             font-style: normal;
@@ -100,7 +100,8 @@
           }    
           
           .qr_codes {
-            margin-top: 8vw;
+            margin-top: 3vw;
+            margin-bottom: 1.5vw;
             display: flex;             
             //gap: 2vw;
 
@@ -110,13 +111,14 @@
               flex-shrink: 0;
               //padding-right:0.6vw;
               border-radius: 0.4vw;
-              border-width: 1vw;
+              
+              //border-width: 1.5vw;
             }
 
-            h5 {
+            h5 {                                        
               padding-left:0.6vw;
               flex-direction: column;
-              margin: 0;
+              margin-top: 0.8vw;
               width: 24vw;
               height: 1.52vw;
               flex-shrink: 0;
@@ -159,8 +161,9 @@
 
       img {
         //margin-top: 2vw;
-          width: 27vw;
-          height: 33.06vw;
+          width: 21vw;
+          height: 26vw;
+          //height: max-content;
       }
     }
   
@@ -236,74 +239,6 @@
   }
 }
 
-.mobintro {
-  position: relative;
-  min-height: 60vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
-
-  .bgRectangle {
-    position: absolute;
-    top: 5vw;
-    left: 20vw;
-    z-index: -1;
-    width: 50vw;
-    height: 30vw;
-    background: $primary;
-    background: linear-gradient(216.05deg, #00BDF8 0%, #87BE42 61.29%, #C2D950 100%);
-    filter: blur(1vw);
-}
-
-  .content {
-    display: flex;
-    flex-direction: column;    
-    justify-content: center;
-    align-items: center;
-    padding-top: 0.5rem;    
-
-    .left {        
-        text-align: center;
-        width: 100%;
-
-        h3 {
-          color:rgb(255, 255, 255);
-          cursor: pointer;
-          font-family: 'Visby SemiBold';
-          font-size: 1.5vw;
-          letter-spacing: 0.15vw;
-
-          img {
-              width: 1vw;
-              height: max-content;
-          }
-
-          &:hover {
-              color: $light;
-
-              img {
-                  transform: rotate(-135deg);
-                  transition: all 0.5s ease-in-out;
-              }
-          }
-      }
-
-
-        .carousel {
-            display: flex;
-            flex-direction: column;
-            padding: 0 3vw;
-            justify-content: center;
-            align-items: center;
-            height: 25vw;
-            //margin-left: 10vw;
-            //margin-right: 20vw;
-            margin-bottom: 3vw;
-            //background-color: #000000;
-        }
-    }
-  }
-}
-
 .features {
   padding: 0 10vw;
   //margin-top: 5vw;
@@ -311,7 +246,7 @@
   .component{
     display: flex;
     align-items: center;
-    margin-bottom: 5vw;
+    margin-bottom: 3.5vw;
   
 
   .left {
@@ -690,7 +625,7 @@
           h2 {
               font-size: 2vw;
               font-family: 'Visby Regular';
-              //margin-bottom: 2vw;
+              margin-bottom: 2vw;
               line-height: 2vw;
           }
 
@@ -700,7 +635,7 @@
               background-color: rgba(255, 255, 255, 0.400);
               border: none;
               align-self: center;
-              //margin-bottom: 3vw;
+              margin-bottom: 3vw;
           }
 
           p {
@@ -739,7 +674,7 @@
               height: 18vw;
               margin-left: 5vw;
               margin-right: 5vw;
-              //margin-bottom: 3vw;
+              margin-bottom: 1vw;
           }
       }
   }
@@ -876,17 +811,16 @@
         width: 77.7vw;
         margin: 0%;           
         color: #FFF;
-        font-family: 'Open Sans' ;
+        font-family: 'Visby Bold' ;
         font-size: 8.53vw;
         font-style: normal;
         font-weight: 500;
         line-height: 10.13vw; /* 109.375% */
         letter-spacing: 0.17vw;
-        
 
         span {
           color: #C2D950;
-          font-family: 'Visby Regular';
+          font-family: 'Visby Bold';
           font-size: 8.53vw;
           font-style: normal;
           font-weight: 500;
@@ -898,7 +832,7 @@
 
       p {
         margin-top: 0vw;
-        font-family: 'Visby Regular';
+        font-family: 'Visby Bold';
         font-size: 4.27vw;
         font-style: normal;
         font-weight: 400;
@@ -933,6 +867,7 @@
         img {
           width: 17.8vw;
           height: 18vw;
+          border-radius: 0.8vw;
           flex-shrink: 0;
         }
 
@@ -967,6 +902,76 @@
       }
     }
   }
+
+  
+.mobintro {
+  position: relative;
+  //min-height: 60vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .bgRectangle {
+    position: absolute;
+    top: 5vw;
+    left: 25vw;
+    z-index: -1;
+    width: 50vw;
+    height: 30vw;
+    background: $primary;
+    background: linear-gradient(216.05deg, #00BDF8 0%, #87BE42 61.29%, #C2D950 100%);
+    filter: blur(1vw);
+}
+
+  .content {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;    
+
+    .left {        
+        text-align: center;
+        width: 100%;
+
+        h3 {
+          color:rgb(255, 255, 255);
+          cursor: pointer;
+          font-family: 'Visby SemiBold';
+          font-size: 1.5vw;
+          letter-spacing: 0.15vw;
+          text-align: center;
+
+          img {
+              width: 1vw;
+              height: max-content;
+          }
+
+          &:hover {
+              color: $light;
+
+              img {
+                  transform: rotate(-135deg);
+                  transition: all 0.5s ease-in-out;
+              }
+          }
+      }
+
+
+        .carousel {
+            display: flex;
+            flex-direction: column;
+            padding: 0 3vw;
+            justify-content: center;
+            align-items: center;
+            height: 25vw;
+            //margin-left: 10vw;
+            //margin-right: 20vw;
+            margin-bottom: 3vw;
+            //background-color: #000000;
+        }
+    }
+  }
+}
 
   .features {
     padding: 0 10vw;
