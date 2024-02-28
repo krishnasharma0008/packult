@@ -137,15 +137,13 @@ const VideoGallery = () => {
         }
         
         .video-title {
-          font-family: 'Visby Bold';
-          font-size: 4vw; /* Example size, adjust based on your design */
+          font-size: 1.5rem; /* Example size, adjust based on your design */
           margin-bottom: 0.5rem;
           color: #000; /* Adjust color based on your design */
         }
         
         .video-description {
-          font-size: 3vw; /* Example size, adjust based on your design */
-          font-family: 'Visby Regular';
+          font-size: 1rem; /* Example size, adjust based on your design */
           color: #666; /* Lighter text color for the description */
         }
         
@@ -218,6 +216,19 @@ const VideoGallery = () => {
           .video-player iframe {
             width: 100%;
             height: auto;
+          }
+
+          .video-title {
+            font-family: 'Visby Bold';
+            font-size: 4vw; /* Example size, adjust based on your design */
+            margin-bottom: 0.5rem;
+            color: #000; /* Adjust color based on your design */
+          }
+          
+          .video-description {
+            font-size: 3vw; /* Example size, adjust based on your design */
+            font-family: 'Visby Regular';
+            color: #666; /* Lighter text color for the description */
           }
 
           .video-list {
