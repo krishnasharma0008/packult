@@ -650,10 +650,10 @@ export default function Index(){
                       {OfferImageData?.data?.data.map((item, index) => (
                         <div className={styles.carousel} key={index} >
                           <div style={{boxShadow:"0 0 10px #A3DCFF",backgroundColor:"#000000",height: "25vw", width:"100%"}}>
-                          <Image
-                              width={200}
-                              height={200}
-                              style={{objectFit: "cover",height: "25vw",width:"100%"}}
+                            <Image
+                              width={1000}
+                              height={1000}
+                              style={{height: "25vw",width:"100%"}}
                               alt="Picture of the author"
                               src={item.image}
                               key={index}

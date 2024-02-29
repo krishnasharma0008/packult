@@ -63,11 +63,6 @@ export async function deleteImage(path) {
     }
 }
 
-// const imageArray = [{
-//     id: "image1",
-//     file: image1
-// }]
-
 export async function uploadImageArray(imageArray, path) {
 
 
