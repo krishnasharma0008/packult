@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../styles/components/contact.module.scss";
 import Image from "next/image";
 import { uploadData } from "../utils/firebase_data_handler";
@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { ROUTES } from "../common/routes";
 
 export default function PackarmaContact() {
+  const [mobile, setMobile] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitText, setSubmitText] = useState("Submit");
   const form = useRef();
@@ -62,6 +63,12 @@ export default function PackarmaContact() {
         }
       );
   };
+
+  useEffect(() => {
+    //   fetch blog data using api
+    //Aos.init();
+    setMobile(window.innerWidth < 768 ? true : false);
+  }, []);
 
   // const inputStyle = {
   //   width: 'calc(90% - 10px)', // Adjust the width as needed
@@ -121,32 +128,31 @@ export default function PackarmaContact() {
             alt={"Contact Packult"}
           />
         {/* Move the social icons here, right below the Image component */}
-        <div className={styles.icons}>
-          {/* <Link href="https://www.facebook.com/sustainovation">
-              <Image
-                src="/assets/icons/facebook.svg"
-                width={30}
-                height={30}
-                alt="Facebook Icon"
-              />
-          </Link>
-          <Link href="https://www.instagram.com/packult2021/">
-              <Image
-                src="/assets/icons/instagram.svg"
-                width={30}
-                height={30}
-                alt="Instagram Icon"
-              />
-          </Link> */}
-          <Link href="https://www.linkedin.com/showcase/packarma/" target="_blank">
+        {mobile ? (
+          <div className={styles.icons} >         
+            <Link href="https://www.linkedin.com/showcase/packarma/" target="_blank">
               <Image
                 src="/assets/icons/linkedin.svg"
                 width={30}
                 height={30}
                 alt="Linkedin Icon"
+                //style={{position:"relative",marginRight:"-3vw",top:"3vw"}}
+              />
+            </Link>
+          </div>
+        ):(
+          <div className={styles.icons} >         
+            <Link href="https://www.linkedin.com/showcase/packarma/" target="_blank">
+              <Image
+                src="/assets/icons/linkedin.svg"
+                width={30}
+                height={30}
+                alt="Linkedin Icon"
+                //style={{position:"relative",marginRight:"-3vw",top:"3vw"}}
               />
           </Link>
         </div>
+        )}
         </div>
 
 

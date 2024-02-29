@@ -74,7 +74,7 @@ export default function Index(){
               color="#A3DCFF"
               height="50vw"
               width="150vw"
-              top="85vw"
+              top="65vw"
               left="-135vw"
               blur="5vw"
             />
@@ -82,7 +82,7 @@ export default function Index(){
               color="#BB80FF"
               height="50vw"
               width="150vw"
-              top="125vw"
+              top="105vw"
               left="96vw"
               blur="6vw"
             />
@@ -278,7 +278,7 @@ export default function Index(){
                         {OfferImageData?.data?.data.map((item, index) => (
                           <div className={styles.carousel} key={index} >
                             <div style={{height: "35vw", width:"80%",paddingLeft:"8vw"}}>
-                            <Image
+                              <Image
                                 width={200}
                                 height={200}
                                 style={{

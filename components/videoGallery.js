@@ -16,20 +16,17 @@ const VideoGallery = () => {
   );
 
   const videoArray = packarma_videoData.data?.data || [];
-  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);//0 for selected to the first video
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);
   const [visibleVideos, setVisibleVideos] = useState(3);
 
   const handleThumbnailClick = (index) => {
-    console.log("Thumbnail clicked:", index);
     setSelectedVideoIndex(index);
   };
 
   const selectedVideo = videoArray[selectedVideoIndex] || {};
 
   const handleScroll = (direction) => {
-    console.log(direction);
     const newIndex = direction === 'up' ? selectedVideoIndex - 1 : selectedVideoIndex + 1;
-    console.log(newIndex);
     const maxVisibleVideos = 3;
 
     if (newIndex >= 0 && newIndex < videoArray.length) {
@@ -45,22 +42,13 @@ const VideoGallery = () => {
     }
   };
 
-  // useEffect(() => {
-  //   // Simulate a click on the up scroll button on load
-  //   handleScroll('up');
-  // }, []);
-
   return (
     <div style={{ marginTop: "2rem", marginBottom: "2rem", display: "flex", flexDirection: "column" }}>
-      {/* Container for Video and List (and possibly video info for larger screens) */}
       <div className="video-and-list-container">
         <div className="gallery-container">
-          {/* Video Player */}
           <div className="video-player">
             <iframe src={selectedVideo.url} frameBorder="0" allowFullScreen title="Main Video"></iframe>
           </div>
-
-          {/* Video List - Hidden in Mobile View */}
           <div className="video-list">
             <button className="scroll-button" onClick={() => handleScroll('up')}>▲</button>
             <div className="thumbnail-container">
@@ -74,70 +62,27 @@ const VideoGallery = () => {
           </div>
         </div>
       </div>
-
-      {/* Video Information */}
       <div className="video-info">
         <h3 className="video-title">{selectedVideo.name}</h3>
         <p className="video-description">{selectedVideo.content}</p>
       </div>
-
-      {/* Thumbnail Carousel for Mobile Devices - Hidden in Desktop View */}
-      <div className='content'>
-        <Carousel
-          slidesToShow={3}
-          defaultControlsConfig={{
-            nextButtonText: ">",
-            prevButtonText: "<",
-            nextButtonProps: { "aria-label": "Next" },
-            prevButtonProps: { "aria-label": "Previous" },
-            nextButtonStyle: {
-              backgroundColor: "#87BE42",
-              width: "2vw",
-              height: "2vw",
-              borderRadius: "50%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              cursor: "pointer",
-              transition: "all 0.3s ease-in-out",
-              marginRight: "-10px",
-            },
-            prevButtonStyle: {
-              backgroundColor: "#87BE42",
-              width: "2vw",
-              height: "2vw",
-              borderRadius: "50%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              cursor: "pointer",
-              transition: "all 0.3s ease-in-out",
-            },
-            pagingDotsStyle: {
-              display: "none",
-            },
-          }}
-        >
-          {videoArray.map((video, index) => (
-            <div key={index} style={{ paddingLeft: "8vw", paddingRight: "2vw" }}>
-              <iframe
-                src={video.url}
-                width="100%"
-                height="90vw"
-                style={{ backgroundColor: 'black', maxWidth: '100%', cursor: 'pointer' }}
-                frameBorder="0"
-                allowFullScreen
-                onClick={() => handleThumbnailClick(index)}
-              />
+      {/* Updated mobile video list with previous and next buttons */}
+      <div className="mobile-video-list">
+        <button className="scroll-button" onClick={() => handleScroll('up')}>◄</button>
+        <div className="thumbnail-container">
+          {videoArray.filter((_, index) => index !== selectedVideoIndex).slice(0, visibleVideos).map((video, index) => (
+            <div key={index} className="video-item" onClick={() => handleThumbnailClick(index)}>
+              <iframe src={video.url} frameBorder="0" allowFullScreen style={{ width: "100%", height: "97.5%" }}></iframe>
             </div>
           ))}
-        </Carousel>
+        </div>
+        <button className="scroll-button" onClick={() => handleScroll('down')}>►</button>
       </div>
 
       <style jsx>{`
         .video-and-list-container {
           display: flex;
-          flex-direction: column;
+          align-items: center;
         }
 
         .gallery-container {
@@ -147,7 +92,8 @@ const VideoGallery = () => {
 
         .video-player {
           flex: 1;
-          margin-right: 40px;
+          margin-right: 90px; /* Adjust margin for spacing */
+          width: 70%; /* Updated width */
         }
 
         .video-info {
@@ -169,18 +115,13 @@ const VideoGallery = () => {
           width: 784.88px;
           height: 540.69px;
         }
-
-        .content {
-          display: none;
-        }
-
+        
         .video-list {
           flex: 1;
           display: flex;
           flex-direction: column;
-          //align-items: center;
           align-items: flex-start;
-          width: 140px;
+          width: 10%; /* Updated width */
         }
 
         .thumbnail-container {
@@ -196,9 +137,9 @@ const VideoGallery = () => {
         .video-item {
           margin-top: 20px;
           cursor: pointer;
-          height: 133.82px;
+          //height: 133.82px;
           width: 133.82px;
-          background-color: #000000;
+          //background-color: #000000;
         }
 
         .scroll-button {
@@ -217,21 +158,26 @@ const VideoGallery = () => {
           background-color: #87BE42;
         }
 
+        .mobile-video-list {
+          display: none;
+        }
+
         @media (min-width: 768px) and (max-width: 1024px) {
           .video-player iframe {
             width: 500px;
             height: 333px;
           }
         }
-
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .gallery-container {
             flex-direction: column;
           }
 
           .video-player {
             margin-right: 0;
-            margin-bottom: 20px;
+            //margin-bottom: 20px;
+            width: 100%;
+            height: auto;
           }
 
           .video-player iframe {
@@ -256,11 +202,20 @@ const VideoGallery = () => {
             display: none;
           }
 
-          .content {
-            height: 20vw;
+          .mobile-video-list {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+          }
+
+          .mobile-video-list .thumbnail-container {
+            display: flex;
+            overflow-x: auto;
+            margin: 10px 0;
+          }
+
+          .mobile-video-list .scroll-button {
+            display: block;
           }
         }
       `}</style>

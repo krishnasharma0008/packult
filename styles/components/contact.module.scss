@@ -122,18 +122,17 @@
            
             
             .icons {
-                // display: grid;
-                // grid-auto-flow: column;
-                // grid-gap: 2vw;
-                // grid-column-gap: 2vw;
-                text-align: right;
-                //display: flex;
-                align-items: end;
-                margin-top: 3vw;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end; /* Align items to the right */
+                align-items: baseline; /* Align items to the baseline vertically */
+                margin-left: 2vw;
+                margin-top: 4.5vw;
 
                 img {
                 width: 4vw;
                 height: max-content;
+
                 }
             }
         //}
@@ -186,6 +185,21 @@
                 height: 30vw;
                 width: max-content;
                 margin-left: 0vw;
+            }
+
+            .icons {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end; /* Align items to the right */
+                align-items: baseline; /* Align items to the baseline vertically */
+                 margin-left: -2vw;
+                 margin-top: 9vw;
+
+                img {
+                width: 4vw;
+                height: max-content;
+
+                }
             }
             
         }

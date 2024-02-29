@@ -45,7 +45,7 @@ export default function Footer() {
             <Link
               data-aos="fade-up"
               data-aos-offset="-700"
-              href="https://www.facebook.com/sustainovation"
+              href="https://www.facebook.com/sustainovation" target="_blank"
             >
               <Image
                 src="/assets/icons/facebook.svg"
@@ -57,7 +57,7 @@ export default function Footer() {
             <Link
               data-aos="fade-up"
               data-aos-offset="-700"
-              href="https://www.instagram.com/packultstudio/"
+              href="https://www.instagram.com/packultstudio/" target="_blank"
             >
               <Image
                 src="/assets/icons/instagram.svg"
@@ -69,7 +69,7 @@ export default function Footer() {
             <Link
               data-aos="fade-up"
               data-aos-offset="-700"
-              href="https://www.linkedin.com/showcase/101407321/admin/feed/posts/"
+              href="https://www.linkedin.com/company/packult-studio-private-limited" target="_blank"
             >
               <Image
                 src="/assets/icons/linkedin.svg"
