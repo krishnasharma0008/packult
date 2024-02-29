@@ -279,8 +279,8 @@ export default function Index(){
                           <div className={styles.carousel} key={index} >
                             <div style={{height: "35vw", width:"80%",paddingLeft:"8vw"}}>
                               <Image
-                                width={200}
-                                height={200}
+                                width={1000}
+                                height={1000}
                                 style={{
                                   objectFit: "cover",
                                   // borderRadius: "10px",
