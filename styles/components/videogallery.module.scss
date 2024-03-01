@@ -61,38 +61,116 @@
                 background-color: #87BE42;
               }                    
           }
-      }
-
-      .videoinfo {
-        margin-top: 10px;
-      }
-
-      .videotitle {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: #000;
-      }
-
-      .videodescription {
-        font-size: 1rem;
-        color: #666;
-      }
+      }      
 
 }
 
-.mobilevideolist {
-    display: none;
+.videoinfo {
+  margin-top: 10px;
+ 
+  h3 {
+    font-family: 'Visby Bold';
+    font-size: 4vw;
+    margin-bottom: 0.5rem;
+    color: black;
   }
+    p {
+      font-size: 1.58vw;
+      font-family: "Visby Regular";
+      font-weight: 300;
+      line-height: 2.24vw;
+      text-align: justify;
+    }
+  
+}
+
+// .mobilevideolist {
+//     display: none;
+//   }
 
   @media screen and (max-width: $mobile) {
-    .videolist {
-        display: none;
-      }
-}
+    // .videolist {
+    //     display: none;
+    //   }
+    .videolistcontainer {
+      display: flex;                    
+      align-items: center;
+      justify-content:center;
+  
+      .gallerycontainer {
+          display: flex;
+          align-items: center;
+          width:100%;
+          height: max-content;
+  
+          //Left
+          .videoplayer {           
+              width: 100% !important;
+  
+              iframe {
+                  width: 100%;
+                  height: 30vw;
+                }    
+            }                        
+        }
+    }
 
-@media screen and (min-width:$mobile ) and (max-width: $tablet) {
-    .videoplayer iframe {
-        width: 500px;
-        height: 333px;
+    .mobilevideolist {
+      display: flex;
+      flex-direction: row;
+      align-items: center;      
+
+      .thumbnailcontainer {
+        display: flex;
+        overflow-x: auto;
+        margin: 10px 0;  
+        margin-left: 5vw; 
+        align-items: center;
+        width: 100%;
+        
+        iframe {
+          width: 100%;
+          height: 20vw;
+        }  
       }
+
+      .scrollbutton {
+        padding: 5px;
+        cursor: pointer;
+        background-color: #87BE42;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        margin: 0 auto; /* Center the button */
+        margin-left: 50px;
+      }
+
+      .scrollbutton:hover {
+        background-color: #87BE42;
+      }
+
+      .scroll-button {
+        display: block;
+      }
+  }
+
+    .videoinfo {
+      margin-top: 10px;
+     
+      h3 {
+        font-family: 'Visby Bold';
+        font-size: 4vw;
+        margin-bottom: 0.5rem;
+        color: black;
+      }
+        p {
+          font-size: 3vw;
+          font-family: "Visby Regular";
+          font-weight: 300;
+          line-height: 3vw;
+          text-align: justify;
+        }
+      
+    }
 }
