@@ -3,8 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from "@tanstack/react-query";
 import { getAllData } from "../utils/firebase_data_handler";
 import Carousel from 'nuka-carousel';
+import style from "../styles/components/videogallery.module.scss";
 
 const VideoGallery = () => {
+
+  const [mobile, setMobile] = useState(false);
+
   const packarma_videoData = useQuery(
     ["packarma_video"],
     () => {
@@ -42,43 +46,50 @@ const VideoGallery = () => {
     }
   };
 
+  useEffect(() => {
+    setMobile(window.innerWidth < 768 ? true : false);
+  }, []);
+
   return (
-    <div style={{ marginTop: "2rem", marginBottom: "2rem", display: "flex", flexDirection: "column" }}>
-      <div className="video-and-list-container">
-        <div className="gallery-container">
-          <div className="video-player">
+    <div>
+      <div className={style.videolistcontainer}>
+        <div className={style.gallerycontainer}>
+          <div className={style.videoplayer}>
             <iframe src={selectedVideo.url} frameBorder="0" allowFullScreen title="Main Video"></iframe>
           </div>
-          <div className="video-list">
-            <button className="scroll-button" onClick={() => handleScroll('up')}>▲</button>
-            <div className="thumbnail-container">
+          {!mobile && (
+          <div className={style.videolist}>
+            <button className={style.scrollbutton} onClick={() => handleScroll('up')}>▲</button>
+            <div className={style.thumbnailcontainer}>
               {videoArray.filter((_, index) => index !== selectedVideoIndex).slice(0, visibleVideos).map((video, index) => (
-                <div key={index} className="video-item" onClick={() => handleThumbnailClick(index)}>
+                <div key={index} className={style.videoitem} onClick={() => handleThumbnailClick(index)}>
                   <iframe src={video.url} frameBorder="0" allowFullScreen style={{ width: "100%", height: "97.5%" }}></iframe>
                 </div>
               ))}
             </div>
-            <button className="scroll-button" style={{ marginTop: "20px"}} onClick={() => handleScroll('down')}>▼</button>
+            <button className={style.scrollbutton} style={{ marginTop: "20px"}} onClick={() => handleScroll('down')}>▼</button>
           </div>
+          )}
         </div>
       </div>
-      <div className="video-info">
-        <h3 className="video-title">{selectedVideo.name}</h3>
-        <p className="video-description">{selectedVideo.content}</p>
+      <div className={style.videoinfo}>
+        <h3 className={style.videotitle}>{selectedVideo.name}</h3>
+        <p className={style.videodescription}>{selectedVideo.content}</p>
       </div>
       {/* Updated mobile video list with previous and next buttons */}
+      {mobile && (
       <div className="mobile-video-list">
         <button className="scroll-button" onClick={() => handleScroll('up')}>◄</button>
         <div className="thumbnail-container">
           {videoArray.filter((_, index) => index !== selectedVideoIndex).slice(0, visibleVideos).map((video, index) => (
-            <div key={index} className="video-item" onClick={() => handleThumbnailClick(index)}>
+            <div key={index} className={style.videoitem} onClick={() => handleThumbnailClick(index)}>
               <iframe src={video.url} frameBorder="0" allowFullScreen style={{ width: "100%", height: "97.5%" }}></iframe>
             </div>
           ))}
         </div>
         <button className="scroll-button" onClick={() => handleScroll('down')}>►</button>
       </div>
-
+      )}
       <style jsx>{`
         .video-and-list-container {
           display: flex;
@@ -91,9 +102,9 @@ const VideoGallery = () => {
         }
 
         .video-player {
-          flex: 1;
+          //flex: 1;
           margin-right: 90px; /* Adjust margin for spacing */
-          width: 70%; /* Updated width */
+          width: 80%; /* Updated width */
         }
 
         .video-info {
@@ -112,12 +123,12 @@ const VideoGallery = () => {
         }
 
         .video-player iframe {
-          width: 784.88px;
-          height: 540.69px;
+          width: 100%;
+          height: max-content;
         }
         
         .video-list {
-          flex: 1;
+          //flex: 1;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -138,7 +149,8 @@ const VideoGallery = () => {
           margin-top: 20px;
           cursor: pointer;
           //height: 133.82px;
-          width: 133.82px;
+          width: 8.85vw;
+          height:auto;
           //background-color: #000000;
         }
 
