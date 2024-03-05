@@ -764,7 +764,7 @@ export default function Index(){
                             <li>
                               <h3> Search History</h3>
                               The app&apos;s history tab stores previously searched solutions, providing easy access to your search history.
-                              <br /><br /><br /><br />
+                              
                             </li>
                           {/* </ul>
                           <ul data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">                             */}
@@ -873,6 +873,7 @@ export default function Index(){
                             alignItems: "center",
                             cursor: "pointer",
                             transition: "all 0.3s ease-in-out",
+                            marginTop:"-4.5vw",
                           },
                           prevButtonStyle: {
                             backgroundColor: "#87BE42",
@@ -884,6 +885,7 @@ export default function Index(){
                             alignItems: "center",
                             cursor: "pointer",
                             transition: "all 0.3s ease-in-out",
+                            marginTop:"-4.5vw",
                           },
 
                           pagingDotsStyle: {
