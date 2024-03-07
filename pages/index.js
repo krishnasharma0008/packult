@@ -1071,7 +1071,7 @@ export default function Home() {
               </div>
               <Image
                 src={"/assets/images/home/iPhone 12 Pro.png"}
-                alt="Download Packarma App"
+                alt="Enter details like the product, Packaging type, shelf life & product weight to raise business enquiry of your desired categories."
                 width={1000}
                 height={1000}
               />

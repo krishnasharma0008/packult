@@ -59,7 +59,34 @@ export default function Index(){
     return(
         <Layout>
           <Head>
-            <title>Packult - create | New Page </title>
+            <title>Packult - create | All about your guide to material selection for your product </title>
+            <meta name="description" content="What is Packarma-packaging app for flexible Packaging, laminate and increase Self life of food,Personal care Primary Packaging material selection for product." />
+            <meta name="keywords" content="Packaging-APP, Structure for Primary Packaging, How to increase self-life, Pouch, Packaging solutions, Economical, Sustainable Packaging." />
+            <link rel="canonical" href="https://packult.com/packarma-app" />
+            <link rel="alternate" href="https://packult.com/packarma-app" hreflang="en" />
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org/",
+                    "@type": "BreadcrumbList",
+                    itemListElement: [
+                      {
+                        "@type": "ListItem",
+                        position: 1,
+                        name: "Home",
+                        item: "https://packult.com/",
+                      },
+                      {
+                        "@type": "ListItem",
+                        position: 2,
+                        name: "Packarma App",
+                        item: "https://packult.com/packarma",
+                      },
+                    ],
+                  }),
+                }}
+              />
           </Head>
           <div className={styles.lap_particles}>                
             <Particles
@@ -185,14 +212,14 @@ export default function Index(){
                           src="/assets/images/packarma/rightimage.png"
                           width={1000}
                           height={1000}
-                          alt="Innovative Packaging"
+                          alt="Categories of product for which Packarma packaging app developed by Packult offers Packaging solution."
                         />
                     </div>
                     <div className={styles.qr_codes}>
                       <Link href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
                         <Image
                           src={"/assets/images/packarma/PACKARMA_C_QR.png"}
-                          alt="Packarma For Customer-QR Code"
+                          alt="Scanner to download or access Packarma packaging app developed by Packult."
                           width={1000}
                           height={1000}
                         />
@@ -288,7 +315,7 @@ export default function Index(){
                                   height: "30vw",
                                   width:"100%"
                                 }}
-                                alt="Picture of the author"
+                                alt="Download now to get 1 free credit"
                                 src={item.image}
                                 key={index}
                               />
@@ -312,7 +339,7 @@ export default function Index(){
                         src="/assets/images/packarma/benefitmob.png"
                         width={1000}
                         height={1000}
-                        alt="Innovative Packaging"
+                        alt="Enter details like product, Packaging type, shelf-life & product weight to get packaging material with technical propertiesEnter details like product, Packaging type, shelf-life & product weight to get packaging material with technical propertiesEnter details like product, Packaging type, shelf-life & product weight to get packaging material with technical propertiesEnter details like product, Packaging type, shelf-life & product weight to get packaging material with technical properties"
                         //className={styles.center}
                       />      
                       <div className={styles.apple_play_store}>
@@ -375,7 +402,7 @@ export default function Index(){
                     <div className={styles.middle}>
                       <Image
                         src="/assets/images/packarma/feature_middle.png"                    
-                          alt="Green Arrow Icon"
+                          alt="Categories of product for which Packarma app facilitates primary packaging material selection that suits your product.."
                           height={1000}
                           width={1000}
                           />
@@ -421,7 +448,7 @@ export default function Index(){
                       <div className={styles.LinkedinImage}>
                         <Image
                           src={"/assets/images/about/about (5).png"}
-                          alt="Manish Mehta-Packaging Expert in India"
+                          alt="Packarma unique packaging app for material selection an initiative by Packult and concept and idea by Manish Mehta"
                           width={1000}
                           height={1000}
                         />
@@ -549,7 +576,7 @@ export default function Index(){
                           <Link href="https://www.qrcodechimp.com/page/rq4f2808n4xz" rel="noopener noreferrer" target="_blank">
                             <Image
                               src={"/assets/images/packarma/PACKARMA_C_QR.png"}
-                              alt="Packarma For Customer-QR Code"
+                              alt="Scanner to download or access Packarma packaging app developed by Packult."
                               width={1000}
                               height={1000}
                               //style={{paddingRight:"0.6vw"}}
@@ -586,7 +613,7 @@ export default function Index(){
                       src="/assets/images/packarma/rightimage.png"
                       width={1000}
                       height={100}
-                      alt="Innovative Packaging"
+                      alt="Categories of product for which Packarma packaging app developed by Packult offers Packaging solution."
                     />                                                          
                   </div>
                 </div>      
@@ -654,7 +681,7 @@ export default function Index(){
                               width={1000}
                               height={1000}
                               style={{height: "25vw",width:"100%"}}
-                              alt="Picture of the author"
+                              alt="Download now to get 1 free credit"
                               src={item.image}
                               key={index}
                             />
@@ -681,7 +708,7 @@ export default function Index(){
                         src="/assets/images/packarma/benefitmob.png"
                         width={1000}
                         height={1000}
-                        alt="Innovative Packaging"
+                        alt="Enter details like product, Packaging type, shelf-life & product weight to get packaging material with technical properties"
                         //className={styles.center}
                       />                                                          
                     </div>
@@ -746,7 +773,7 @@ export default function Index(){
                     <div className={styles.middle}>
                       <Image
                         src="/assets/images/packarma/feature_middle.png"                    
-                          alt="Green Arrow Icon"
+                          alt="Categories of product for which Packarma app facilitates primary packaging material selection that suits your product.."
                           height={1000}
                           width={1000}
                           />
@@ -792,7 +819,7 @@ export default function Index(){
                       <div className={styles.LinkedinImage}>
                         <Image
                           src={"/assets/images/about/about (5).png"}
-                          alt="Manish Mehta-Packaging Expert in India"
+                          alt="Packarma unique packaging app for material selection an initiative by Packult and concept and idea by Manish Mehta"
                           width={1000}
                           height={1000}
                         />

@@ -11,6 +11,7 @@ import WorkNumbers from "../../components/workNumbers"
 import PackarmaContact from "../../components/packarma-contact"
 import { getDataById } from "../../utils/firebase_data_handler"
 import { useQuery } from "@tanstack/react-query"
+import Head from "next/head";
 
 function Index() {
 
@@ -31,6 +32,11 @@ function Index() {
 
     return (
         <Layout>
+            <Head>
+                <title>Packult - create | All about your guide to material selection for your product </title>
+                <meta name="description" content="What is Packarma-packaging app for flexible Packaging, laminate and increase Self life of food,Personal care Primary Packaging material selection for product." />
+                <meta name="keywords" content="Packaging-APP, Structure for Primary Packaging, How to increase self-life, Pouch, Packaging solutions, Economical, Sustainable Packaging." />
+            </Head>
             <div className={styles.blog} >
                 {
                     blogData.isLoading ? <h1>Loading...</h1> :
