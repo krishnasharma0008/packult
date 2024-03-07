@@ -1064,7 +1064,7 @@ export default function Home() {
               <div className={styles.logo}>
                 <Image
                   src={"/assets/images/packarma/PACKARMA_final logo-01.png"}
-                  alt="Download Packarma App"
+                  alt="Packarma Logo"
                   width={1000}
                   height={1000}
                 />
