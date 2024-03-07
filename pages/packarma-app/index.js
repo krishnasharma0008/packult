@@ -409,7 +409,7 @@ export default function Index(){
                       </div>
                       <div className={styles.right}>
                         <div className={styles.content}>   
-                          <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",right:"15vw",top:"32.6vw"}}></div>
+                          <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",right:"15vw",top:"35vw"}}></div>
                           <div style={{position:"relative",backgroundColor:"#C2D950",borderRadius:"50%",width:"2.5vw",height:"2.5vw",right:"15vw",top:"4.3vw"}}></div>                                            
                           <ul data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">                            
                             <li>
