@@ -81,7 +81,7 @@ export default function Index(){
                         "@type": "ListItem",
                         position: 2,
                         name: "Packarma App",
-                        item: "https://packult.com/packarma",
+                        item: "https://packult.com/packarma-app",
                       },
                     ],
                   }),
