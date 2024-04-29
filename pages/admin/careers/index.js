@@ -43,22 +43,32 @@ function Model(props) {
     }
   );
 
+  // Define a state to hold the selected work hours
+const [selectedWorkHours, setSelectedWorkHours] = useState(DetailsData?.data?.data.workHours || "Part-Time");
+
+// Function to handle radio button change
+const handleRadioChange = (value) => {
+  setSelectedWorkHours(value);
+};
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    console.log(e.target[0].value);
-    console.log(e.target[1].value);
-    console.log(e.target[2].value);
-    console.log(e.target[3].value);
+    // console.log(e.target[0].value);
+    // console.log(e.target[1].value);
+    // console.log(e.target[2].value);
+    // console.log(e.target[3].value);
+    // console.log(e.target[3].value);
 
     const data = {
       designation: e.target[0].value,
-      workHours: e.target[1].value === "Part-Time" ? "Part-Time" : "Full-Time",
+      workHours: e.target[1].checked === "Part-Time" ? "Part-Time" : "Full-Time",
       exp: e.target[3].value,
       location: e.target[4].value,
     };
-
+    //console.log("Form input value:", e.target[1].checked);
+    //console.log(data);
     if (type === "edit") {
       updateDataById(data, `careers/${id}`).then((res) => {
         if (res.message === "success") {
@@ -130,11 +140,13 @@ function Model(props) {
                     name="workHours"
                     value="Part-Time"
                     type={type}
-                    defaultChecked={
-                      DetailsData?.data?.data.workHours === "Part-Time"
-                        ? true
-                        : false
-                    }
+                    // defaultChecked={
+                    //   DetailsData?.data?.data.workHours === "Part-Time"
+                    //     ? true
+                    //     : false
+                    // }
+                    checked={DetailsData?.data?.data.workHours === "Part-Time"?true:false}
+                    onChange={() => handleRadioChange("Full-Time")}
                     id={`inline-${type}-1`}
                   />
                   <Form.Check
@@ -142,11 +154,13 @@ function Model(props) {
                     label="Full-Time"
                     name="workHours"
                     value="Full-Time"
-                    defaultChecked={
-                      DetailsData?.data?.data.workHours === "Full-Time"
-                        ? true
-                        : false
-                    }
+                    // defaultChecked={
+                    //   DetailsData?.data?.data.workHours === "Full-Time"
+                    //     ? true
+                    //     : false
+                    // }
+                    checked={DetailsData?.data?.data.workHours === "Full-Time"?true:false}
+                    onChange={() => handleRadioChange("Full-Time")}
                     type={type}
                     id={`inline-${type}-2`}
                   />

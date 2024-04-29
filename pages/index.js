@@ -760,8 +760,7 @@ export default function Home() {
               </h2>
             </Link>
             <Link
-              data-aos="fade-up"
-              data-aos-duration="1000"
+              data-aos="fade-up" data-aos-duration="1000"
               href={ROUTES.MANAGEMENT_AND_ASSISTANCE}
             >
               <h2>
@@ -779,7 +778,7 @@ export default function Home() {
           </div>
           <div className={styles.all_services_button}>
             <hr></hr>
-            <Link href={ROUTES.SERVICES}>View all Services</Link>
+              <Link href={ROUTES.SERVICES}>View all Services</Link>
             <hr></hr>
           </div>
         </div>
@@ -826,6 +825,7 @@ export default function Home() {
                     alignItems: "center",
                     cursor: "pointer",
                     transition: "all 0.3s ease-in-out",
+                    marginTop:"-4.5vw",
                   },
                   prevButtonStyle: {
                     backgroundColor: "#87BE42",
@@ -837,6 +837,7 @@ export default function Home() {
                     alignItems: "center",
                     cursor: "pointer",
                     transition: "all 0.3s ease-in-out",
+                    marginTop:"-4.5vw",
                   },
 
                   pagingDotsStyle: {
