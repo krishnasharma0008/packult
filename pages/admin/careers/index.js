@@ -140,12 +140,12 @@ const handleRadioChange = (value) => {
                     name="workHours"
                     value="Part-Time"
                     type={type}
-                    defaultChecked={
-                      DetailsData?.data?.data.workHours === "Part-Time"
-                        ? true
-                        : false
-                    }
-                    // checked={DetailsData?.data?.data.workHours === "Part-Time"?true:false}
+                    // defaultChecked={
+                    //   DetailsData?.data?.data.workHours === "Part-Time"
+                    //     ? true
+                    //     : false
+                    // }
+                    checked={DetailsData?.data?.data.workHours === "Part-Time"?true:false}
                     onChange={() => handleRadioChange("Full-Time")}
                     id={`inline-${type}-1`}
                   />
@@ -154,12 +154,12 @@ const handleRadioChange = (value) => {
                     label="Full-Time"
                     name="workHours"
                     value="Full-Time"
-                    defaultChecked={
-                      DetailsData?.data?.data.workHours === "Full-Time"
-                        ? true
-                        : false
-                    }
-                    //checked={DetailsData?.data?.data.workHours === "Full-Time"?true:false}
+                    //defaultChecked={
+                    //   DetailsData?.data?.data.workHours === "Full-Time"
+                    //     ? true
+                    //     : false
+                    // }
+                    checked={DetailsData?.data?.data.workHours === "Full-Time"?true:false}
                     onChange={() => handleRadioChange("Full-Time")}
                     type={type}
                     id={`inline-${type}-2`}
