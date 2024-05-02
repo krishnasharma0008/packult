@@ -63,12 +63,12 @@ const handleRadioChange = (value) => {
 
     const data = {
       designation: e.target[0].value,
-      workHours: e.target[1].checked === "Part-Time" ? "Part-Time" : "Full-Time",
+      workHours: e.target[1].checked === true ? "Part-Time" : "Full-Time",
       exp: e.target[3].value,
       location: e.target[4].value,
     };
-    //console.log("Form input value:", e.target[1].checked);
-    //console.log(data);
+    console.log("Form input value:", e.target[1].checked);
+    console.log(data);
     if (type === "edit") {
       updateDataById(data, `careers/${id}`).then((res) => {
         if (res.message === "success") {
