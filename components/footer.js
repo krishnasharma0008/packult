@@ -101,7 +101,7 @@ export default function Footer() {
               </Link>
             </p>
             <p>
-              7, Udyog Bhavan, Sonawala Rd,
+              275, Udyog Bhavan, Sonawala Rd,
               <br />
               Goregaon (E), Mumbai, Maharashtra
               <br />
