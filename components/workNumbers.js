@@ -24,9 +24,9 @@ export default function WorkNumbers() {
       });
     };
 
-    const yearsIncrement = Math.ceil(200 / 1000); // Divide the total by a larger duration to slow down the animation
+    const yearsIncrement = Math.ceil(226 / 1000); // Divide the total by a larger duration to slow down the animation
     const professionalsIncrement = Math.ceil(20 / 1000);
-    const projectsIncrement = Math.ceil(32 / 1000);
+    const projectsIncrement = Math.ceil(119 / 1000);
 
     const animateNumbers = () => {
       let yearsCount = 0;
@@ -34,11 +34,11 @@ export default function WorkNumbers() {
       let projectsCount = 0;
 
       const animateStep = () => {
-        if (yearsCount <= 201) {
+        if (yearsCount <= 225) {
           setYearsOfExperience(yearsCount);
           yearsCount += yearsIncrement;
         } else {
-          setYearsOfExperience(201);
+          setYearsOfExperience(226);
         }
 
         if (professionalsCount < 20) {
@@ -48,17 +48,17 @@ export default function WorkNumbers() {
           setSkilledProfessionals(20);
         }
 
-        if (projectsCount < 32) {
+        if (projectsCount < 118) {
           setProjects(projectsCount);
           projectsCount += projectsIncrement;
         } else {
-          setProjects(32);
+          setProjects(118);
         }
 
         if (
-          yearsCount < 201 ||
+          yearsCount < 226 ||
           professionalsCount < 20 ||
-          projectsCount < 32
+          projectsCount < 118
         ) {
           requestAnimationFrame(animateStep);
         }
@@ -91,11 +91,13 @@ export default function WorkNumbers() {
         <h3>Skilled Professionals</h3>
       </div>
       <div className={styles.content}>
-        <h2>
+        <h2 ref={projectsRef}>{projects}</h2>
+        <h3>Projects</h3>
+        {/* <h2>
           <span>0</span>
           <span ref={projectsRef}>{projects}</span>
         </h2>
-        <h3>Projects</h3>
+        <h3>Projects</h3> */}
       </div>
     </div>
   );
