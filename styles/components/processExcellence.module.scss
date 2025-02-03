@@ -1,0 +1,146 @@
+@import "../theme.scss";
+@import "../utils.scss";
+
+.Layout1 {
+  padding: 0 10vw;
+  font-family: "Visby Regular";
+
+  h1 {
+    font-family: "Visby Bold";
+    color: $primary;
+    margin: 0;
+    font-size: $heading1;
+    margin-bottom: 2vw;
+  }
+  h2 {
+    font-family: "Visby Bold";
+    color: $dark;
+    margin: 0;
+    font-size: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+  .Top {
+    margin-bottom: 1vw;
+    p {
+      margin: 0;
+      font-size: 1.5vw;
+      letter-spacing: 0.2vw;
+      line-height: 2.5vw;
+    }
+  }
+
+  .Middle {
+    display: flex;
+    
+
+    p {
+      margin: 0;
+      font-size: 1.5vw;
+      letter-spacing: 0.15vw;
+      line-height: 2.5vw;
+    }
+
+    img {
+      width: 30vw;
+      height: 40vw;
+      border-radius: 3vw;
+    }
+  }
+
+  .Bottom {
+    p {
+      font-size: 1.5vw;
+      letter-spacing: 0.2vw;
+      line-height: 2.5vw;
+    }
+  }
+}
+
+.Layout2 {
+  font-family: "Visby Regular";
+
+  padding: 0 10vw;
+
+  h1 {
+    font-family: "Visby Bold";
+    color: $primary;
+    margin: 0;
+    font-size: $heading1;
+    margin-bottom: 2vw;
+  }
+  h2 {
+    font-family: "Visby Bold";
+    color: $primary;
+    margin: 0;
+    font-size: $heading1;
+    margin-bottom: 2vw;
+  }
+  img {
+    margin-top: 2vw;
+    width: 100%;
+    height: max-content;
+  }
+
+  p {
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    line-height: 2.5vw;
+  }
+}
+
+.Layout3 {
+  font-family: "Visby Regular";
+  padding: 0 10vw;
+
+  h1 {
+    font-family: "Visby Bold";
+    color: $primary;
+    margin: 0;
+    font-size: $heading1;
+    margin-bottom: 2vw;
+  }
+  h2 {
+    font-family: "Visby Bold";
+    color: $primary;
+    margin: 0;
+    font-size: $heading1;
+    margin-bottom: 2vw;
+}
+  p {
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    line-height: 2.5vw;
+  }
+}
+
+.Layout4 {
+  font-family: "Visby Regular";
+
+  padding: 0 10vw;
+
+  h1 {
+    font-family: "Visby Bold";
+    color: $primary;
+    margin: 0;
+    font-size: $heading1;
+    margin-bottom: 2vw;
+  }
+  h2 {
+    font-family: "Visby Bold";
+    color: $primary;
+    margin: 0;
+    font-size: $heading1;
+    margin-bottom: 2vw;
+}
+  img {
+    width: 100%;
+    height: max-content;
+  }
+
+  p {
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    line-height: 2.5vw;
+  }
+}

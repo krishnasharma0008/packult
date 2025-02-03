@@ -142,13 +142,14 @@ export default function Index() {
               in the evolution towards world-class packaging solutions
             </h1>
             <p>
-              Our team has strong end to end capabilities across Creatives,
+              {/* Our team has strong end to end capabilities across Creatives,
               Artworks & Graphics, Packaging Development, Value improvement,
               Sourcing Excellence & Operational excellence, which makes it
               easier for us to address our clients diverse demands. Starting
               from ideation, product research, development, design, feasibility,
               supply chain management and execution, our team assist our clients
-              at every step.
+              at every step. */}
+              We started Packult in September 2021 with a vision to provide comprehensive end-to-end solutions across Creatives, Artworks & Graphics, Packaging Development and innovation, Value Improvement, Sourcing Excellence, and Operational Excellence. Our expertise enables us to address the diverse demands of our clients seamlessly from ideation, product research, and development to design, feasibility analysis, supply chain management, and execution.
             </p>
             <button
               onClick={() => {

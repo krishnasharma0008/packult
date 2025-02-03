@@ -1,13 +1,22 @@
 import Contact from "../../components/contact";
 import WorkNumbers from "../../components/workNumbers";
+import ProcessExcellence from "../../components/processexcellence";//new
 import ContentLayout1 from "../../components/contentLayout1";
 import ContentLayout2 from "../../components/contentLayout2";
 import styles from "../../styles/packagingSolution.module.scss";
 import Layout from "../../components/layout";
 import Head from "next/head";
 export default function index() {
+    // const layout1 = {
+    //     heading: "Operational Excellence",
+    //     content1: "Packult has a dedicated and experienced Operational Excellence team which provides Process Excellence & Converting Excellence services to Film producers and converters. Our Process Excellence offerings include specialty inline / offline coatings, Material & Process optimization, SOPs for Screen changing and Die & Coating Head cleaning, Trim waste reduction and more. Our Converting Excellence services include Machine retrofit, upgradation & refurbishment for productivity enhancement and wastage reduction. We also offer services for decommissioning of machines from one location and recommissioning at another.",
+    //     imagePath: "/assets/images/operational-excellence/1.png",
+    //     imageName: "Recyclable Packaging",
+    //     content2: "",
+    // }
     const layout1 = {
-        heading: "Operational Excellence",
+        heading: "Operational Excellence & Outsourcing Services",
+        headingcontent:"We specialize in handling projects on a turnkey basis for setting up manufacturing factories in India. Our expertise includes providing techno-commercial experience, administrative assistance, and skilled manpower resources to ensure seamless execution",
         content1: "Packult has a dedicated and experienced Operational Excellence team which provides Process Excellence & Converting Excellence services to Film producers and converters. Our Process Excellence offerings include specialty inline / offline coatings, Material & Process optimization, SOPs for Screen changing and Die & Coating Head cleaning, Trim waste reduction and more. Our Converting Excellence services include Machine retrofit, upgradation & refurbishment for productivity enhancement and wastage reduction. We also offer services for decommissioning of machines from one location and recommissioning at another.",
         imagePath: "/assets/images/operational-excellence/1.png",
         imageName: "Recyclable Packaging",
@@ -16,7 +25,7 @@ export default function index() {
     const layout2 = {
         heading: "Process Excellence",
         headType:"h2",
-        imagePath: "/assets/images/operational-excellence/2.png",
+        imagePath: "/assets/images/operational-excellence/2.jpg",
         imageName: "Adobe Icons",
         content1: " We provide following services under Process Excellence: Recipe evaluation and selection, Material and Process optimization, Product failure investigation – RCA and Troubleshooting, On-site Technical support, Safety checks, Trim waste reduction, Specialty inline / offline coatings, SOPs for Screen changing and Die & Coating Head cleaning",
     }
@@ -59,7 +68,8 @@ export default function index() {
                 />
             </Head>
             <section className={styles.content1} >
-                <ContentLayout1 data={layout1} />
+                {/* <ContentLayout1 data={layout1} /> */}
+                <ProcessExcellence  />
             </section>
             <section>
                 <ContentLayout2 data={layout2} />
