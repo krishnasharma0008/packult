@@ -6,7 +6,7 @@ export default function ProcessExcellence({ data }) {
     return (
         <div className={styles.Layout1} >
             <div class={styles.Top}>
-                <h1>Process Excellence & Outsourcing Services</h1>
+                <h1>Operational Excellence & Outsourcing Services</h1>
                 <p>We specialize in handling projects on a turnkey basis for setting up manufacturing factories in India. Our expertise includes providing<b> techno-commercial experience, administrative assistance, and skilled manpower resources</b> to ensure seamless execution.</p>
             </div>
             <div class={styles.Middle}>
